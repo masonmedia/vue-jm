@@ -4,6 +4,26 @@
     ":description": "Website name",
     ":type": "line"
   },
+  "page_1": {
+    "banner": {
+      ":description": "Homepage banner section",
+      "title": { 
+        ":type": "text" 
+      },
+      "subtitle": { 
+        ":type": "text" 
+      },
+      "btn1": { 
+        ":type": "text" 
+      },
+      "btn2": { 
+        ":type": "text" 
+      },
+      "img": {
+        ":type": "line" 
+      }
+    }
+  },
   "index": {
     ":description": "Content for the index page",
     "title": {":type": "line"},
