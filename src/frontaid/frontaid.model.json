@@ -118,8 +118,8 @@
       },
 
       "services": [
-        {":description": "This is the services section, add individual service content here."},
         {
+          ":description": "This is the services section, add individual service content here.",
           "title": {":type": "text", ":richtext": true},
           "subtitle": {":type": "text", ":richtext": true},
           "text": {":type": "text", ":richtext": true},
