@@ -92,42 +92,36 @@
 
       "services": [
         {
-          "id": 1,
           "title": {":type": "text", ":richtext": true},
           "subtitle": {":type": "text", ":richtext": true},
           "text": {":type": "text", ":richtext": true},
           "img": {":type": "text"}
         },
         {
-          "id": 2,
           "title": {":type": "text"},
           "subtitle": {":type": "text", ":richtext": true},
           "text": {":type": "text", ":richtext": true},
           "img": {":type": "text"}
         },
         {
-          "id": 3,
           "title": {":type": "text"},
           "subtitle": {":type": "text", ":richtext": true},
           "text": {":type": "text", ":richtext": true},
           "img": {":type": "text"}
         },
         {
-          "id": 4,
           "title": {":type": "text"},
           "subtitle": {":type": "text", ":richtext": true},
           "text": {":type": "text", ":richtext": true},
           "img": {":type": "text"}
         },
         {
-          "id": 5,
           "title": {":type": "text"},
           "subtitle": {":type": "text", ":richtext": true},
           "text": {":type": "text", ":richtext": true},
           "img": {":type": "text"}
         },
         {
-          "id": 6,
           "title": {":type": "text"},
           "subtitle": {":type": "text", ":richtext": true},
           "text": {":type": "text", ":richtext": true},
