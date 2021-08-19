@@ -1,6 +1,29 @@
 {
   ":name": "Example Website",
   "page_1": {
+    "menu": {
+      ":description": "Website menu",
+      "brand": { 
+        ":type": "line",
+        ":richtext": true
+      },
+      "menu_links": [
+        {
+          ":description": "Menu links.",
+          "text": {":type": "text", ":richtext": true}
+        },
+        {
+          "text": {":type": "text", ":richtext": true}
+        },
+        {
+          "text": {":type": "text", ":richtext": true}
+        },
+        {
+          "text": {":type": "text", ":richtext": true}
+        }
+      ]
+    },
+
     "banner": {
       ":description": "Homepage banner section",
       "title": { 
@@ -24,6 +47,7 @@
         ":type": "line" 
       }
     },
+
     "section_1": {
       ":description": "Intro/mission content section",
       "microTitle": { 
@@ -180,6 +204,22 @@
     },
     "btn": { 
       ":type": "line",
+      ":richtext": true
+    }
+  },
+
+  "section_8": {
+    ":description": "Image section",
+    "img": {
+      ":description": "Add image file path here: copy and past the url into this line.",
+      ":type": "line" 
+    }
+  },
+
+  "section_9": {
+    ":description": "Footer",
+    "text": { 
+      ":type": "text",
       ":richtext": true
     }
   },
