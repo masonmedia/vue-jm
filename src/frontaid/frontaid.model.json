@@ -59,7 +59,7 @@
         ":richtext": true
       },
       "text": { 
-        ":type": "line",
+        ":type": "text",
         ":richtext": true
       },
       "btn": { 
