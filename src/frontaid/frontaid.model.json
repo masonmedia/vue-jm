@@ -1,25 +1,26 @@
 {
   ":name": "Example Website",
-  "name": {
-    ":description": "Website name",
-    ":type": "line"
-  },
   "page_1": {
     "banner": {
       ":description": "Homepage banner section",
       "title": { 
-        ":type": "text" 
+        ":type": "line",
+        ":richtext": true
       },
       "subtitle": { 
-        ":type": "text" 
+        ":type": "line",
+        ":richtext": true
       },
       "btn1": { 
-        ":type": "text" 
+        ":type": "line",
+        ":richtext": true 
       },
       "btn2": { 
-        ":type": "text" 
+        ":type": "line",
+        ":richtext": true
       },
       "img": {
+        ":description": "Add banner image file path here: copy and past the url into this line.",
         ":type": "line" 
       }
     }
