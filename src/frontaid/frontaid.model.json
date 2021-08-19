@@ -93,7 +93,7 @@
       "services": [
         {
           "id": 1,
-          "title": {":type": "text"},
+          "title": {":type": "text", ":richtext": true},
           "subtitle": {":type": "text", ":richtext": true},
           "text": {":type": "text", ":richtext": true},
           "img": {":type": "text"}
