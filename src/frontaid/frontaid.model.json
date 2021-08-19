@@ -23,6 +23,73 @@
         ":description": "Add banner image file path here: copy and past the url into this line.",
         ":type": "line" 
       }
+    },
+    "section_1": {
+      ":description": "Intro/mission content section",
+      "microTitle": { 
+        ":type": "line",
+        ":richtext": true
+      },
+      "title": { 
+        ":type": "line",
+        ":richtext": true
+      },
+      "text": { 
+        ":type": "text",
+        ":richtext": true
+      },
+      "btn": { 
+        ":type": "line",
+        ":richtext": true
+      }
+    },
+    "section_2": {
+      ":description": "Image section",
+      "img": {
+        ":description": "Add image file path here: copy and past the url into this line.",
+        ":type": "line" 
+      }
+    },
+    "section_3": {
+      ":description": "Services intro section",
+      "microTitle": { 
+        ":type": "line",
+        ":richtext": true
+      },
+      "title": { 
+        ":type": "line",
+        ":richtext": true
+      },
+      "text": { 
+        ":type": "text",
+        ":richtext": true
+      },
+      "btn": { 
+        ":type": "line",
+        ":richtext": true
+      }
+    },
+    "section_4": {
+      ":description": "Individual services content",
+      "service1": {
+        "microTitle": { 
+          ":type": "line",
+          ":richtext": true
+        },
+        "title": { 
+          ":type": "line",
+          ":richtext": true
+        },
+        "text": { 
+          ":type": "text",
+          ":richtext": true
+        },
+        "img": {
+          ":description": "Add image file path here",
+          ":type": "line" 
+        }
+      }
+      
     }
   },
   "index": {
