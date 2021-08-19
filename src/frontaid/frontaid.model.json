@@ -94,14 +94,37 @@
   },
   "index": {
     ":description": "Content for the index page",
-    "title": {":type": "line"},
-    "text":  {":type": "text"}
+    "title": {
+      ":type": "line"
+    },
+    "text":  {
+      ":type": "text",
+      ":richtext": true
+    },
+    "img": {
+      ":description": "Add image file path here",
+      ":type": "line" 
+    }
   },
   "blog": {
     ":description": "List of blog posts",
     ":items": {
-      "title": {":type": "line"},
-      "text":  {":type": "text"}
+      "title": {
+        ":type": "line",
+        ":richtext": true
+      },
+      "subtitle": {
+        ":type": "line",
+        ":richtext": true
+      },
+      "text":  {
+        ":type": "text",
+        ":richtext": true
+      },
+      "img": {
+        ":description": "Add image file path here",
+        ":type": "line" 
+      }
     }
   }
 }
