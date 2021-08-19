@@ -92,6 +92,7 @@
 
       "services": [
         {
+          ":description": "This is the services section, add individual service content here.",
           "title": {":type": "text", ":richtext": true},
           "subtitle": {":type": "text", ":richtext": true},
           "text": {":type": "text", ":richtext": true},
@@ -131,20 +132,27 @@
       
     }
   },
-  "index": {
-    ":description": "Content for the index page",
-    "title": {
-      ":type": "line"
+
+  "section_5": {
+    ":description": "About Jen content section",
+    "microTitle": { 
+      ":type": "line",
+      ":richtext": true
     },
-    "text":  {
+    "title": { 
+      ":type": "line",
+      ":richtext": true
+    },
+    "text": { 
       ":type": "text",
       ":richtext": true
     },
-    "img": {
-      ":description": "Add image file path here",
-      ":type": "line" 
+    "btn": { 
+      ":type": "line",
+      ":richtext": true
     }
   },
+
   "blog": {
     ":description": "List of blog posts",
     ":items": {
