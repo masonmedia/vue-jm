@@ -1,42 +1,47 @@
 <template>
     <b-container fluid class="p-0">
 
+        <!-- full width text section -->
         <b-row v-if="level === 1" align-v="center" class="min-vh-100">
+            <b-col lg="8" offset-lg="2" align-self="center" class="text-center p-5">
+                <h5 class="text-uppercase" v-html="microTitle"></h5>
+                <h2 v-html="title"></h2>
+                <p class="my-4" v-html="text"></p>
+                <b-button variant="info" v-html="btn1"></b-button>
+            </b-col>
+        </b-row>
+        
+        <!-- full width img section -->
+        <b-row v-else-if="level === 2" align-v="center" class="min-vh-100">
+            <b-col lg="12" align-self="stretch" class="p-0">
+                <b-img :src="imgUrl" fluid class="img-full min-vh-100"></b-img>
+            </b-col>
+        </b-row>
+
+        <!-- 50-50 text-img section -->
+        <b-row v-else-if="level === 3" align-v="center" class="min-vh-100">
             <b-col lg="6" align-self="center" class="text-left p-5">
-                <h5 :v-html="microTitle"></h5>
-                <h2 :v-html="title"></h2>
-                <p :v-html="text"></p>
-                <b-button variant="info" :v-html="cta"></b-button>
+                <h5 class="text-uppercase" v-html="microTitle"></h5>
+                <h2 v-html="title"></h2>
+                <p class="my-4" v-html="text"></p>
+                <b-button variant="info" v-html="cta"></b-button>
             </b-col>
             <b-col lg="6" align-self="center" class="p-0">
                 <b-img :src="imgUrl" fluid class="img-full min-vh-100"></b-img>
             </b-col>
         </b-row>
         
-        <b-row v-else-if="level === 2" align-v="center" class="min-vh-100">
+        <!-- 50-50 img-text section -->
+        <b-row v-else-if="level === 4" align-v="center" class="min-vh-100">
             <b-col lg="6" align-self="stretch" class="p-0">
                 <b-img :src="imgUrl" fluid class="img-full min-vh-100"></b-img>
             </b-col>
             <b-col lg="6" align-self="center" class="text-left p-5">
-                <h5 :v-html="microTitle"></h5>
-                <h2 :v-html="title"></h2>
-                <p :v-html="text"></p>
-                <b-button variant="info" :v-html="cta"></b-button>
-            </b-col>
-        </b-row>
-        
-        <b-row v-else-if="level === 3" align-v="center" class="min-vh-100">
-            <b-col lg="6" align-self="center" class="text-center min-vh-100 p-5">
-                <h5 :v-html="microTitle"></h5>
-                <h2 :v-html="title"></h2>
-                <p :v-html="text"></p>
-                <b-button variant="info" :v-html="cta"></b-button>
-            </b-col>
-        </b-row>
-        
-        <b-row v-else-if="level === 4" align-v="center" class="min-vh-100">
-            <b-col lg="12" align-self="stretch" class="p-0">
-                <b-img src="https://source.unsplash.com/random/1200x700?sand" fluid class="img-full min-vh-100"></b-img>
+                <h5 class="text-uppercase" v-html="microTitle"></h5>
+                <h2 v-html="title"></h2>
+                <p class="my-4" v-html="text"></p>
+                <b-button variant="info" v-html="btn1"></b-button>
+                <b-button variant="info" v-html="btn2"></b-button>
             </b-col>
         </b-row>
         
@@ -50,7 +55,7 @@
                 <slot name="text" :props="props">
                     <h5>{{microTitle}}</h5>
                     <h2>Subtitle</h2>
-                    <p :v-html="text"></p>
+                    <p class="my-4" v-html="text"></p>
                     <b-button variant="info">Learn more</b-button>
                 </slot>
             </b-col>
@@ -78,7 +83,8 @@ export default {
         microTitle: String,
         title: String,
         text: String,
-        cta: String,
+        btn1: String,
+        btn2: String,
         imgUrl: String
         
     },
