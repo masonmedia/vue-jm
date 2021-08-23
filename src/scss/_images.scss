@@ -1,0 +1,27 @@
+img {
+    width: 100%;
+}
+
+.img-full {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.bg-bulb {
+    background: url(/assets/img/jm_hands_bulb.jpeg);
+    background-position: center;
+    background-size: cover;
+  }
+
+@media (max-width: 834px) {
+    .bg-bulb {
+      background-position: 90% 100%;
+    }
+  }
+  
+  @media (max-width: 601px) {
+    .bg-bulb {
+      background-position: 85% 100%;
+    }
+  }

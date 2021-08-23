@@ -1,0 +1,17 @@
+@import 'nav';
+@import 'colors';
+@import 'text';
+@import 'images';
+@import 'utilities';
+
+body {
+    width: 100%;
+    max-width: 1400px;
+    overflow-x: hidden;
+    margin: 0 auto;
+    font-family: Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #222222;
+}
+
