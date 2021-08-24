@@ -115,13 +115,15 @@
           "microTitle": {":type": "line"},
           "title": {":type": "line"},
           "text": {":type": "text", ":richtext": true},
-          "img": {":type": "line"}
+          "img1": {":type": "line"},
+          "img2": {":type": "line"}
         },
         {
           "microTitle": {":type": "line"},
           "title": {":type": "line"},
           "text": {":type": "text"},
-          "img": {":type": "line"}
+          "img1": {":type": "line"},
+          "img2": {":type": "line"}
         },
         {
           "microTitle": {":type": "line"},
