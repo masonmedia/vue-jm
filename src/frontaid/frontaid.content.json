@@ -36,7 +36,8 @@
       "btn": "What I do"
     },
     "section_2": {
-      "img": ""
+      "img": "",
+      "img2": "https://source.unsplash.com/1600x900/?beach"
     },
     "section_3": {
       "microTitle": "Services",
