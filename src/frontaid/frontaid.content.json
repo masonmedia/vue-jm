@@ -32,6 +32,12 @@
     },
     "section_2": {
       "img": "https://source.unsplash.com/random/1200x800?carribbean"
+    },
+    "section_3": {
+      "microTitle": "Services",
+      "title": "Healthy systems are those in which there is an&nbsp;open flow&nbsp;of&nbsp;information&nbsp;and&nbsp;ideas.",
+      "text": "<p>Drawing on over 20 years of experience as an educator, process designer, and facilitator, I offer a number of services to meet groups where they are and support them in opening the pathways of communication. I help groups to enable the flow of information and ideas and maximize their potential. These services include&nbsp;conflict resolution,&nbsp;listening and perspective-taking workshops,&nbsp;facilitated practice dialogues,&nbsp;team-building and group facilitation, and&nbsp;team-building nature retreats.Find out more about what I do below.</p>",
+      "btn": "Learn more"
     }
   }
 }
