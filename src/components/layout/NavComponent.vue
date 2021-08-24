@@ -1,8 +1,7 @@
 <template>
     <div>
         <b-navbar toggleable="lg" fixed="top" type="dark" variant="dark">
-            <b-navbar-brand href="#">NavBar</b-navbar-brand>
-
+            <b-navbar-brand href="#" v-html="data.menu.brand"></b-navbar-brand>
             <b-navbar-toggle target="nav-collapse">
                 <span class="">
               <!-- plus icon -->
@@ -16,8 +15,11 @@
 
             <b-collapse id="nav-collapse" is-nav>
             <b-navbar-nav class="ml-auto">
-                <b-nav-item href="#">Link</b-nav-item>
-                <b-nav-item href="#" disabled>Disabled</b-nav-item>
+                <span v-for="item in data.menu.menu_links" :key="item.id">
+                    <b-nav-item :href="item.link">
+                        {{item.text}}
+                    </b-nav-item>
+                </span>
             </b-navbar-nav>
             </b-collapse>
         </b-navbar>
@@ -25,7 +27,14 @@
 </template>
 
 <script>
+import data from '@/frontaid/frontaid.content.json'
+
 export default {
     name: 'NavComponent',
+    data() {
+        return {
+            data: data
+        }
+    }
 }
 </script>

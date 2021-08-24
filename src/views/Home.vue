@@ -1,10 +1,11 @@
 <template>
   <b-container fluid class="p-0">
-    <b-row align-v="center" class="min-vh-100 bg-sand">
-      <b-col lg="6" align-self="center" class="text-left p-5"> 
-        <h1 class="site-title font-weight-bold" v-html="data.banner.title"></h1>
+    <b-row align-v="center" class="min-vh-100 relative">
+      <div class="absolute z-0 left top bg-sand w-50 h-100"></div>
+      <b-col lg="6" align-self="end" class="text-left p-5 min-vh-50"> 
+        <h1 class="relative site-title font-weight-bold" v-html="data.banner.title"></h1>
         <h3 class="my-3" v-html="data.banner.subtitle"></h3>
-        <b-button variant="outline-dark" class="mr-2" v-html="data.banner.btn1"></b-button>
+        <b-button href="#mission" variant="outline-dark" class="mr-2" v-html="data.banner.btn1"></b-button>
         <b-button variant="dark" v-html="data.banner.btn2"></b-button>
       </b-col>
       <b-col lg="6" align-self="stretch" class="p-0">
@@ -12,11 +13,15 @@
       </b-col>
     </b-row>
 
-    <section-component :level="3"
+    <section-component :level="1"
+    id="mission"
     :microTitle="data.section_1.microTitle"
     :title="data.section_1.title"
     :text="data.section_1.text"
     :btn1="data.section_1.btn"></section-component>
+    
+    <section-component :level="2"
+    :imgUrl="data.section_2.img"></section-component>
   </b-container>
 
 </template>

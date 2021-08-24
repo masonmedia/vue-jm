@@ -5,7 +5,7 @@
         <b-row v-if="level === 1" align-v="center" class="min-vh-100">
             <b-col lg="8" offset-lg="2" align-self="center" class="text-center p-5">
                 <h5 class="text-uppercase" v-html="microTitle"></h5>
-                <h2 v-html="title"></h2>
+                <h2 class="section-title" v-html="title"></h2>
                 <p class="my-4" v-html="text"></p>
                 <b-button variant="info" v-html="btn1"></b-button>
             </b-col>

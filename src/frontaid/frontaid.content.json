@@ -3,16 +3,20 @@
     "brand": "<strong>jen mason consulting</strong>",
     "menu_links": [
       {
-        "text": "Mission"
+        "text": "Mission",
+        "link": "#mission"
       },
       {
-        "text": "Services"
+        "text": "Services",
+        "link": "#services"
       },
       {
-        "text": "About"
+        "text": "About",
+        "link": "#about"
       },
       {
-        "text": "Contact"
+        "text": "Contact",
+        "link": "#contact"
       }
     ]
   },

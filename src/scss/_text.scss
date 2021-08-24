@@ -1,13 +1,21 @@
-
-  /* text */
-  
+/* text */
+.playfair, 
+h1, .h1,
+.h2, h2,
+.h3, h3,
+h4, .h4,
+.navbar-brand {
+  font-family: 'Playfair Display', cursive;
+}
   .site-title {
     font-size: 13vmin;
     font-weight: 900;
     line-height: 85%;
-    letter-spacing: -3px;
+    letter-spacing: -2px;
+    // letter-spacing: -3px;
     margin: 0;
-    -webkit-text-stroke: 3px #343a40;
+    // -webkit-text-stroke: 3px #343a40;
+    -webkit-text-stroke: 1px #343a40;
     text-shadow: 1px 1px 5px #DCD2C8, 3px 3px 10px #DCD2C8, 6px 6px 5px #DCD2C8;
   }
   
@@ -24,10 +32,6 @@
     letter-spacing: -3px;
     padding: 15px 0;
     margin: 0;
-  }
-  
-  .playfair {
-    font-family: 'Playfair Display', cursive;
   }
   
   .text-shadow {
