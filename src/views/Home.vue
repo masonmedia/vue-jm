@@ -9,7 +9,8 @@
         <b-button variant="dark" v-html="data.banner.btn2"></b-button>
       </b-col>
       <b-col lg="6" align-self="stretch" class="p-0">
-       <b-img :src="data.banner.img" fluid class="img-full min-vh-50"></b-img>
+       <b-img v-if="data.banner.img1" :src="data.banner.img1" fluid class="img-full min-vh-50"></b-img>
+       <b-img v-else :src="data.banner.img2" fluid class="img-full min-vh-50"></b-img>
       </b-col>
     </b-row>
 
