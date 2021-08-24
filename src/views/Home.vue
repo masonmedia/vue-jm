@@ -35,7 +35,7 @@
     :microTitle="item.microTitle"
     :title="item.title"
     :text="item.text"
-    :btn1="item.btn1"
+    :btn1="item.btn"
     :imgUrl="item.img"></section-component>
   </b-container>
 

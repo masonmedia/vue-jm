@@ -4,7 +4,7 @@
         <!-- full width text section -->
         <b-row v-if="level === 1" align-v="center" class="min-vh-100">
             <b-col lg="8" offset-lg="2" align-self="center" class="text-center p-5">
-                <h5 class="text-uppercase" v-html="microTitle"></h5>
+                <h5 class="small text-uppercase" v-html="microTitle"></h5>
                 <h2 class="section-title" v-html="title"></h2>
                 <p class="my-4" v-html="text"></p>
                 <b-button variant="info" v-html="btn1"></b-button>
@@ -21,13 +21,14 @@
         <!-- 50-50 text-img section -->
         <b-row v-else-if="level === 3" align-v="center" class="min-vh-100">
             <b-col lg="6" align-self="center" class="text-left p-5">
-                <h5 class="text-uppercase" v-html="microTitle"></h5>
-                <h2 v-html="title"></h2>
+                <h6 class="small text-uppercase" v-html="microTitle"></h6>
+                <h2 class="h1 font-weight-bold" v-html="title"></h2>
                 <p class="my-4" v-html="text"></p>
-                <b-button variant="info" v-html="cta"></b-button>
+                <b-icon icon="arrow-down" font-scale="2" variant="dark"></b-icon>
             </b-col>
             <b-col lg="6" align-self="center" class="p-0">
-                <b-img :src="imgUrl" fluid class="img-full min-vh-100"></b-img>
+                <b-img v-if="imgUrl" :src="require(`@/assets/img/${imgUrl}`)" fluid class="img-full min-vh-100"></b-img>
+                <b-img v-else :src="remoteImgUrl" fluid class="img-full min-vh-100"></b-img>
             </b-col>
         </b-row>
         
@@ -37,7 +38,7 @@
                 <b-img :src="imgUrl" fluid class="img-full min-vh-100"></b-img>
             </b-col>
             <b-col lg="6" align-self="center" class="text-left p-5">
-                <h5 class="text-uppercase" v-html="microTitle"></h5>
+                <h5 class="small text-uppercase" v-html="microTitle"></h5>
                 <h2 v-html="title"></h2>
                 <p class="my-4" v-html="text"></p>
                 <b-button variant="info" v-html="btn1"></b-button>
@@ -85,7 +86,8 @@ export default {
         text: String,
         btn1: String,
         btn2: String,
-        imgUrl: String
+        imgUrl: String,
+        remoteImgUrl: String
         
     },
     data() {
