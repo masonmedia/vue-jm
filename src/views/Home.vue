@@ -35,7 +35,8 @@
     :microTitle="item.microTitle"
     :title="item.title"
     :text="item.text"
-    :imgUrl="item.img"></section-component>
+    :img1="item.img1"
+    :img2="item.img2"></section-component>
     
     <section-component :level="4"
     v-for="item in data.section_4.services.slice(1,2)" :key="item.id"

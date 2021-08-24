@@ -14,7 +14,8 @@
         <!-- full width img section -->
         <b-row v-else-if="level === 2" align-v="center" class="min-vh-100">
             <b-col lg="12" align-self="stretch" class="p-0">
-                <b-img :src="imgUrl" fluid class="img-full min-vh-100"></b-img>
+                <b-img v-if="img1" :src="require(`@/assets/img/${img1}`)" fluid class="img-full min-vh-100"></b-img>
+                <b-img v-if="img2" :src="img2" fluid class="img-full min-vh-100"></b-img>
             </b-col>
         </b-row>
 

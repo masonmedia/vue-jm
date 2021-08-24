@@ -67,8 +67,12 @@
     
     "section_2": {
       ":description": "Image section",
-      "img": {
-        ":description": "Add image file path here: copy and past the url into this line.",
+      "img1": {
+        ":description": "Add local image file path here.",
+        ":type": "line" 
+      },
+      "img2": {
+        ":description": "Add a web image url here: i.e. copy and past an image url from unsplash into this line.",
         ":type": "line" 
       }
     },
