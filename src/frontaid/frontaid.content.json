@@ -36,7 +36,8 @@
       "btn": "What I do"
     },
     "section_2": {
-      "img": "https://source.unsplash.com/random/1200x800?carribbean"
+      "img": "https://source.unsplash.com/random/1200x800?carribbean",
+      "img2": "https://source.unsplash.com/random/1200x800?carribbean"
     },
     "section_3": {
       "microTitle": "Services",
