@@ -27,15 +27,17 @@
                 <p class="my-4" v-html="text"></p>
                 <b-icon icon="arrow-down" font-scale="2" variant="dark"></b-icon>
             </b-col>
-            <b-col lg="6" align-self="center" class="p-0">
-                <b-img v-if="img1" :src="require(`@/assets/img/${img1}`)" fluid class="img-full min-vh-100"></b-img>
+            <b-col lg="6" align-self="stretch" class="p-0" :class="colClass">
+                <b-img v-if="img1" :src="require(`@/assets/img/${img1}`)" fluid 
+                class="img-full min-vh-100"
+                :class="imgClass"></b-img>
                 <b-img v-else :src="img2" fluid class="img-full min-vh-100"></b-img>
             </b-col>
         </b-row>
         
         <!-- 50-50 img-text section -->
         <b-row v-else-if="level === 4" align-v="center" class="min-vh-100" :class="rowClass">
-            <b-col lg="6" align-self="center" class="p-0">
+            <b-col lg="6" align-self="stretch" class="p-0">
                 <b-img v-if="img1" :src="require(`@/assets/img/${img1}`)" fluid class="img-full min-vh-100"></b-img>
                 <b-img v-else :src="img2" fluid class="img-full min-vh-100"></b-img>
             </b-col>
@@ -75,6 +77,8 @@ export default {
         img1: String,
         img2: String,
         rowClass: String,
+        colClass: String,
+        imgClass: String,
         
     },
     data() {

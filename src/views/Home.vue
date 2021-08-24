@@ -69,6 +69,26 @@
     :img2="item.img2"
     ></section-component>
 
+    <section-component :level="3"
+    v-for="item in data.section_4.services.slice(4,5)" :key="item.id"
+    colClass="relative"
+    imgClass="absolute z-0"
+    :microTitle="item.microTitle"
+    :title="item.title"
+    :text="item.text"
+    :img1="item.img1"
+    :img2="item.img2"></section-component>
+
+    <section-component :level="4"
+    rowClass="bg-linen"
+    v-for="item in data.section_4.services.slice(5,6)" :key="item.id"
+    :microTitle="item.microTitle"
+    :title="item.title"
+    :text="item.text"
+    :img1="item.img1"
+    :img2="item.img2"
+    ></section-component>
+
   </b-container>
 
 </template>
