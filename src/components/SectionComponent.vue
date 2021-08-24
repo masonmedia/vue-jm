@@ -27,8 +27,8 @@
                 <b-icon icon="arrow-down" font-scale="2" variant="dark"></b-icon>
             </b-col>
             <b-col lg="6" align-self="center" class="p-0">
-                <b-img v-if="imgUrl" :src="require(`@/assets/img/${imgUrl}`)" fluid class="img-full min-vh-100"></b-img>
-                <b-img v-else :src="remoteImgUrl" fluid class="img-full min-vh-100"></b-img>
+                <b-img :src="require(`@/assets/img/${imgUrl}`)" fluid class="img-full min-vh-100"></b-img>
+                <b-img :src="remoteImgUrl" fluid class="img-full min-vh-100"></b-img>
             </b-col>
         </b-row>
         
