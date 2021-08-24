@@ -75,9 +75,17 @@
         ":description": "Add local image file path here.",
         ":type": "line" 
       },
+      "img1Alt": {
+        ":description": "Add image alt text here (125 characters visually describing the image).",
+        ":type": "line"
+      },
       "img2": {
         ":description": "Add a web image url here: i.e. copy and past an image url from unsplash into this line.",
         ":type": "line" 
+      },
+      "img2Alt": {
+        ":description": "Add image alt text here (125 characters visually describing the image).",
+        ":type": "line"
       }
     },
     
