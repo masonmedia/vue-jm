@@ -22,6 +22,20 @@
     
     <section-component :level="2"
     :imgUrl="data.section_2.img"></section-component>
+
+    <section-component :level="1"
+    id="services"
+    :microTitle="data.section_3.microTitle"
+    :title="data.section_3.title"
+    :text="data.section_3.text"
+    :btn1="data.section_3.btn"></section-component>
+
+    <section-component :level="3"
+    v-for="item in data.section_4.services" :key="item.id"
+    :microTitle="item.microTitle"
+    :text="item.text"
+    :btn1="item.btn1"
+    :imgUrl="item.img"></section-component>
   </b-container>
 
 </template>

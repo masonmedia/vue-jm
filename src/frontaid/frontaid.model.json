@@ -51,20 +51,17 @@
     "section_1": {
       ":description": "Intro/mission content section",
       "microTitle": { 
-        ":type": "line",
-        ":richtext": true
+        ":type": "line"
       },
       "title": { 
-        ":type": "line",
-        ":richtext": true
+        ":type": "line"
       },
       "text": { 
         ":type": "text",
         ":richtext": true
       },
       "btn": { 
-        ":type": "line",
-        ":richtext": true
+        ":type": "line"
       }
     },
     
@@ -79,20 +76,17 @@
     "section_3": {
       ":description": "Services intro section",
       "microTitle": { 
-        ":type": "line",
-        ":richtext": true
+        ":type": "line"
       },
       "title": { 
-        ":type": "line",
-        ":richtext": true
+        ":type": "line"
       },
       "text": { 
         ":type": "text",
         ":richtext": true
       },
       "btn": { 
-        ":type": "line",
-        ":richtext": true
+        ":type": "line"
       }
     },
 
@@ -100,12 +94,10 @@
       ":description": "Individual services content",
       "service1": {
         "microTitle": { 
-          ":type": "line",
-          ":richtext": true
+          ":type": "line"
         },
         "title": { 
-          ":type": "line",
-          ":richtext": true
+          ":type": "line"
         },
         "text": { 
           ":type": "text",
@@ -120,40 +112,40 @@
       "services": [
         {
           ":description": "This is the services section, add individual service content here.",
-          "title": {":type": "text", ":richtext": true},
-          "subtitle": {":type": "text", ":richtext": true},
+          "title": {":type": "line"},
+          "subtitle": {":type": "line"},
           "text": {":type": "text", ":richtext": true},
-          "img": {":type": "text"}
+          "img": {":type": "line"}
         },
         {
-          "title": {":type": "text"},
-          "subtitle": {":type": "text", ":richtext": true},
-          "text": {":type": "text", ":richtext": true},
-          "img": {":type": "text"}
+          "title": {":type": "line"},
+          "subtitle": {":type": "line"},
+          "text": {":type": "text"},
+          "img": {":type": "line"}
         },
         {
-          "title": {":type": "text"},
-          "subtitle": {":type": "text", ":richtext": true},
-          "text": {":type": "text", ":richtext": true},
-          "img": {":type": "text"}
+          "title": {":type": "line"},
+          "subtitle": {":type": "line"},
+          "text": {":type": "text"},
+          "img": {":type": "line"}
         },
         {
-          "title": {":type": "text"},
-          "subtitle": {":type": "text", ":richtext": true},
-          "text": {":type": "text", ":richtext": true},
-          "img": {":type": "text"}
+          "title": {":type": "line"},
+          "subtitle": {":type": "line"},
+          "text": {":type": "text"},
+          "img": {":type": "line"}
         },
         {
-          "title": {":type": "text"},
-          "subtitle": {":type": "text", ":richtext": true},
-          "text": {":type": "text", ":richtext": true},
-          "img": {":type": "text"}
+          "title": {":type": "line"},
+          "subtitle": {":type": "line"},
+          "text": {":type": "text"},
+          "img": {":type": "line"}
         },
         {
-          "title": {":type": "text"},
-          "subtitle": {":type": "text", ":richtext": true},
-          "text": {":type": "text", ":richtext": true},
-          "img": {":type": "text"}
+          "title": {":type": "line"},
+          "subtitle": {":type": "line"},
+          "text": {":type": "text"},
+          "img": {":type": "line"}
         }
       ]
       
