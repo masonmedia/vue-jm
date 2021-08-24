@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b-navbar toggleable="lg" fixed="top" type="dark" variant="dark">
+        <b-navbar toggleable="lg" fixed="top" type="dark" variant="dark" class="py-3 px-4">
             <b-navbar-brand href="#" v-html="data.menu.brand"></b-navbar-brand>
             <b-navbar-toggle target="nav-collapse">
                 <span class="">

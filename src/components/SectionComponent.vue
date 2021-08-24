@@ -4,7 +4,7 @@
         <!-- full width text section -->
         <b-row v-if="level === 1" align-v="center" class="min-vh-100" :class="rowClass">
             <b-col lg="8" offset-lg="2" align-self="center" class="text-center p-5">
-                <h5 class="small text-uppercase font-weight-bold" v-html="microTitle"></h5>
+                <h5 class="text-uppercase font-weight-bold" v-html="microTitle"></h5>
                 <h2 class="section-title" v-html="title"></h2>
                 <p class="my-4" v-html="text"></p>
                 <b-button variant="info" v-html="btn1"></b-button>
@@ -20,7 +20,7 @@
         </b-row>
 
         <!-- 50-50 text-img section -->
-        <b-row v-else-if="level === 3" align-v="center" class="min-vh-100" :class="rowClass">
+        <b-row v-else-if="level === 3" align-v="center" class="min-vh-100 bg-light" :class="rowClass">
             <b-col lg="6" align-self="center" class="text-left p-5">
                 <h6 class="small text-uppercase" v-html="microTitle"></h6>
                 <h2 class="h1 font-weight-bold" v-html="title"></h2>
@@ -36,7 +36,7 @@
         </b-row>
         
         <!-- 50-50 img-text section -->
-        <b-row v-else-if="level === 4" align-v="center" class="min-vh-100" :class="rowClass">
+        <b-row v-else-if="level === 4" align-v="center" class="min-vh-100 bg-linen" :class="rowClass">
             <b-col lg="6" align-self="stretch" class="p-0">
                 <b-img v-if="img1" :src="require(`@/assets/img/${img1}`)" fluid class="img-full min-vh-100"></b-img>
                 <b-img v-else :src="img2" fluid class="img-full min-vh-100"></b-img>
