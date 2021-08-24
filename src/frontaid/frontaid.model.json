@@ -112,38 +112,38 @@
       "services": [
         {
           ":description": "This is the services section, add individual service content here.",
+          "microTitle": {":type": "line"},
           "title": {":type": "line"},
-          "subtitle": {":type": "line"},
           "text": {":type": "text", ":richtext": true},
           "img": {":type": "line"}
         },
         {
+          "microTitle": {":type": "line"},
           "title": {":type": "line"},
-          "subtitle": {":type": "line"},
           "text": {":type": "text"},
           "img": {":type": "line"}
         },
         {
+          "microTitle": {":type": "line"},
           "title": {":type": "line"},
-          "subtitle": {":type": "line"},
           "text": {":type": "text"},
           "img": {":type": "line"}
         },
         {
+          "microTitle": {":type": "line"},
           "title": {":type": "line"},
-          "subtitle": {":type": "line"},
           "text": {":type": "text"},
           "img": {":type": "line"}
         },
         {
+          "microTitle": {":type": "line"},
           "title": {":type": "line"},
-          "subtitle": {":type": "line"},
           "text": {":type": "text"},
           "img": {":type": "line"}
         },
         {
+          "microTitle": {":type": "line"},
           "title": {":type": "line"},
-          "subtitle": {":type": "line"},
           "text": {":type": "text"},
           "img": {":type": "line"}
         }

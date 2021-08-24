@@ -33,6 +33,7 @@
     <section-component :level="3"
     v-for="item in data.section_4.services" :key="item.id"
     :microTitle="item.microTitle"
+    :title="item.title"
     :text="item.text"
     :btn1="item.btn1"
     :imgUrl="item.img"></section-component>
