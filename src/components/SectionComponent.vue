@@ -15,7 +15,7 @@
         <b-row v-else-if="level === 2" align-v="center" class="min-vh-100">
             <b-col lg="12" align-self="stretch" class="p-0">
                 <b-img v-if="img1" :src="require(`@/assets/img/${img1}`)" fluid class="img-full min-vh-100"></b-img>
-                <b-img v-if="img2" :src="img2" fluid class="img-full min-vh-100"></b-img>
+                <b-img v-else :src="img2" fluid class="img-full min-vh-100"></b-img>
             </b-col>
         </b-row>
 
@@ -29,7 +29,7 @@
             </b-col>
             <b-col lg="6" align-self="center" class="p-0">
                 <b-img v-if="img1" :src="require(`@/assets/img/${img1}`)" fluid class="img-full min-vh-100"></b-img>
-                <b-img v-if="img2" :src="img2" fluid class="img-full min-vh-100"></b-img>
+                <b-img v-else :src="img2" fluid class="img-full min-vh-100"></b-img>
             </b-col>
         </b-row>
         
@@ -37,7 +37,7 @@
         <b-row v-else-if="level === 4" align-v="center" class="min-vh-100">
             <b-col lg="6" align-self="center" class="p-0">
                 <b-img v-if="img1" :src="require(`@/assets/img/${img1}`)" fluid class="img-full min-vh-100"></b-img>
-                <b-img v-if="img2" :src="img2" fluid class="img-full min-vh-100"></b-img>
+                <b-img v-else :src="img2" fluid class="img-full min-vh-100"></b-img>
             </b-col>
             <b-col lg="6" align-self="center" class="text-left p-5">
                 <h6 class="small text-uppercase" v-html="microTitle"></h6>
