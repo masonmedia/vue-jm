@@ -27,6 +27,7 @@
 
     <section-component :level="1"
     id="services"
+    rowClass="bg-linen"
     :microTitle="data.section_3.microTitle"
     :title="data.section_3.title"
     :text="data.section_3.text"
@@ -41,6 +42,7 @@
     :img2="item.img2"></section-component>
     
     <section-component :level="4"
+    rowClass="bg-linen"
     v-for="item in data.section_4.services.slice(1,2)" :key="item.id"
     :microTitle="item.microTitle"
     :title="item.title"
@@ -48,6 +50,25 @@
     :img1="item.img1"
     :img2="item.img2"
     ></section-component>
+
+    <section-component :level="3"
+    v-for="item in data.section_4.services.slice(2,3)" :key="item.id"
+    :microTitle="item.microTitle"
+    :title="item.title"
+    :text="item.text"
+    :img1="item.img1"
+    :img2="item.img2"></section-component>
+
+    <section-component :level="4"
+    rowClass="bg-linen"
+    v-for="item in data.section_4.services.slice(3,4)" :key="item.id"
+    :microTitle="item.microTitle"
+    :title="item.title"
+    :text="item.text"
+    :img1="item.img1"
+    :img2="item.img2"
+    ></section-component>
+
   </b-container>
 
 </template>
