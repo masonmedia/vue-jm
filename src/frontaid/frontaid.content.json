@@ -26,8 +26,8 @@
       "subtitle": "connect. collaborate. create.",
       "btn1": "Learn more",
       "btn2": "Get in touch",
-      "img": "http://jenmasonconsulting.ca/assets/img/jm-rocks-crop.jpg",
-      "img1": "jm-rocks-crop.jpg"
+      "img1": "jm-rocks-crop.jpg",
+      "img2": ""
     },
     "section_1": {
       "microTitle": "Mission",
@@ -36,7 +36,7 @@
       "btn": "What I do"
     },
     "section_2": {
-      "img": "",
+      "img1": "",
       "img2": "https://source.unsplash.com/1600x900/?beach"
     },
     "section_3": {

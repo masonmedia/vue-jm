@@ -9,7 +9,7 @@
         <b-button variant="dark" v-html="data.banner.btn2"></b-button>
       </b-col>
       <b-col lg="6" align-self="stretch" class="p-0">
-       <b-img v-if="data.banner.img1" :src="data.banner.img1" fluid class="img-full min-vh-50"></b-img>
+       <b-img v-if="data.banner.img1" :src="require(`@/assets/img/${data.banner.img1}`)" fluid class="img-full min-vh-50"></b-img>
        <b-img v-else :src="data.banner.img2" fluid class="img-full min-vh-50"></b-img>
       </b-col>
     </b-row>
@@ -22,7 +22,8 @@
     :btn1="data.section_1.btn"></section-component>
     
     <section-component :level="2"
-    :imgUrl="data.section_2.img"></section-component>
+    :img1="data.section_2.img1"
+    :img2="data.section_2.img2"></section-component>
 
     <section-component :level="1"
     id="services"
