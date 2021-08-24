@@ -46,10 +46,11 @@
     "section_4": {
       "services": [
         {
-          "title": "Address and transform conflicts within you group to get unstuck",
+          "title": "Conflict Resolution",
           "subtitle": "Conflict Resolution",
           "text": "<p>A key step in optimizing the effectiveness of your group is to address and move through conflicts large and small that create blocks to the flow of information and ideas. Using a process developed by master facilitator, Linda Lehtonen, I can help your group work through the issues that limit its effectiveness and give your team tools to address and resolve their own communication challenges going forward.</p>",
-          "img": "@/assets/img/jm_conflict_resolution.jpeg"
+          "img": "@/assets/img/jm_conflict_resolution.jpeg",
+          "microTitle": "Address and transform conflicts within you group to get unstuck"
         }
       ]
     }
