@@ -21,7 +21,7 @@
     :microTitle="data.section_1.microTitle"
     :title="data.section_1.title"
     :text="data.section_1.text"
-    :btn1="data.section_1.btn"></section-component>
+    :btn="data.section_1.btn"></section-component>
     
     <section-component :level="2"
     :img1="data.section_2.img1"
@@ -34,14 +34,18 @@
     :text="data.section_3.text"
     :btn1="data.section_3.btn"></section-component>
 
+    <!-- services -->
+
     <section-component :level="3"
+    id="services"
     v-for="item in data.section_4.services.slice(0,1)" :key="item.id"
     :microTitle="item.microTitle"
     :title="item.title"
     :text="item.text"
     :img1="item.img1"
     :img2="item.img2"></section-component>
-    
+
+
     <section-component :level="4"
     v-for="item in data.section_4.services.slice(1,2)" :key="item.id"
     :microTitle="item.microTitle"
@@ -87,13 +91,10 @@
     :img2="item.img2"
     ></section-component>
 
-    <section-component :level="3"
-    v-for="item in data.section_4.services.slice(5,6)" :key="item.id"
+    <section-component :level="1"
     :microTitle="item.microTitle"
     :title="item.title"
-    :text="item.text"
-    :img1="item.img1"
-    :img2="item.img2"></section-component>
+    :text="item.text"></section-component>
 
   </b-container>
 

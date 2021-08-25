@@ -1,5 +1,5 @@
 <template>
-    <b-container fluid class="p-0">
+    <section class="p-0">
 
         <!-- full width text section -->
         <b-row v-if="level === 1" align-v="center" class="min-vh-75 bg-light" :class="rowClass">
@@ -7,7 +7,7 @@
                 <h5 class="text-uppercase font-weight-bold" v-html="microTitle"></h5>
                 <h2 class="section-title" v-html="title"></h2>
                 <p class="my-4" v-html="text"></p>
-                <b-button variant="info" v-html="btn1"></b-button>
+                <b-button variant="info" v-html="btn"></b-button>
             </b-col>
         </b-row>
         
@@ -49,7 +49,7 @@
             </b-col>
         </b-row>
 
-  </b-container>
+  </section>
 </template>
 
 <script>
@@ -72,6 +72,7 @@ export default {
         microTitle: String,
         title: String,
         text: String,
+        btn: String,
         btn1: String,
         btn2: String,
         img1: String,
