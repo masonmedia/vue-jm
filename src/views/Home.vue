@@ -32,7 +32,7 @@
     :microTitle="data.section_3.microTitle"
     :title="data.section_3.title"
     :text="data.section_3.text"
-    :btn1="data.section_3.btn"></section-component>
+    :btn="data.section_3.btn"></section-component>
 
     <!-- services -->
 
@@ -92,9 +92,15 @@
     ></section-component>
 
     <section-component :level="1"
-    :microTitle="item.microTitle"
-    :title="item.title"
-    :text="item.text"></section-component>
+    id="about"
+    :microTitle="data.section_5.microTitle"
+    :title="data.section_5.title"
+    :text="data.section_5.text"
+    :btn="data.section_5.btn"></section-component>
+
+    <section-component :level="2"
+    :img1="data.section_6.img1"
+    :img2="data.section_6.img2"></section-component>
 
   </b-container>
 
