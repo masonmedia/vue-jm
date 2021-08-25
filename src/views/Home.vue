@@ -3,8 +3,22 @@
     <b-row align-v="center" class="min-vh-100 relative">
       <div class="absolute z-0 left top bg-sand w-50 h-100"></div>
       <b-col lg="6" align-self="center" class="text-left p-5 min-vh-50"> 
-        <h1 class="relative site-title-stroke font-weight-bold" v-html="data.banner.title"></h1>
-        <h3 class="my-3" v-html="data.banner.subtitle"></h3>
+
+<!-- <h1 class="display-1">
+<svg viewBox="0 0 600 300">
+  <text text-anchor="middle"
+          x="50%"
+          y="50%"
+          dy=".35em"
+          class="text"
+          >
+      Jen Mason Consulting
+    </text>
+</svg>
+</h1> -->
+
+        <h1 class="text-focus-in text-dark site-title-stroke font-weight-bold" v-html="data.banner.title"></h1>
+        <h3 class="text-focus-in text-dark my-3" v-html="data.banner.subtitle"></h3>
         <b-button href="#mission" variant="outline-dark" class="mr-2" v-html="data.banner.btn1"></b-button>
         <b-button variant="dark" v-html="data.banner.btn2"></b-button>
       </b-col>
@@ -85,6 +99,14 @@
     :img2="item.img2"
     ></section-component>
 
+    <section-component :level="3"
+    v-for="item in data.section_4.services.slice(5,6)" :key="item.id"
+    :microTitle="item.microTitle"
+    :title="item.title"
+    :text="item.text"
+    :img1="item.img1"
+    :img2="item.img2"></section-component>
+
   </b-container>
 
 </template>
@@ -109,7 +131,7 @@ export default {
         },
         rightLayout() {
             this.leftLayout = false;
-        }
-    }
+        },
+    },
 }
 </script>
