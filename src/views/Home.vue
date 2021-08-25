@@ -1,26 +1,14 @@
 <template>
   <b-container fluid class="p-0">
-    <b-row align-v="center" class="min-vh-100 relative">
-      <div class="absolute z-0 left top bg-sand w-50 h-100"></div>
-      <b-col lg="6" align-self="center" class="text-left p-5 min-vh-50"> 
-
-<!-- <h1 class="display-1">
-<svg viewBox="0 0 600 300">
-  <text text-anchor="middle"
-          x="50%"
-          y="50%"
-          dy=".35em"
-          class="text"
-          >
-      Jen Mason Consulting
-    </text>
-</svg>
-</h1> -->
-
-        <h1 class="text-focus-in text-dark site-title-stroke font-weight-bold" v-html="data.banner.title"></h1>
-        <h3 class="text-focus-in text-dark my-3" v-html="data.banner.subtitle"></h3>
+    <b-row align-v="center" class="min-vh-100 relative mt-5">
+      <div class="bg-sand absolute z-0 left bottom w-md-50 h-100"></div>
+      <b-col lg="6" class="left-center text-left p-5 mt-4 mt-lg-0 min-vh-75"> 
+        <h1 class="site-title text-dark text-focus-in font-weight-bold" v-html="data.banner.title"></h1>
+        <h3 class="site-subtitle text-focus-in text-dark my-3" v-html="data.banner.subtitle"></h3>
+        <div class="d-inline-block">
         <b-button href="#mission" variant="outline-dark" class="mr-2" v-html="data.banner.btn1"></b-button>
         <b-button variant="dark" v-html="data.banner.btn2"></b-button>
+        </div>
       </b-col>
       <b-col lg="6" align-self="stretch" class="p-0">
        <b-img v-if="data.banner.img1" :src="require(`@/assets/img/${data.banner.img1}`)" fluid class="img-full min-vh-50"></b-img>

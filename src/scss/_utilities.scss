@@ -4,6 +4,16 @@
     min-height: 75vh;
 }
 
+.w-md-50 {
+    width: 50%;
+}
+
+@media (max-width: 991px) {
+    .w-md-50 {
+        width: 100%;
+    }
+}
+
 // position
 
 .absolute {

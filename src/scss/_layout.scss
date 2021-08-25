@@ -1,0 +1,11 @@
+@mixin left-center($direction, $justify, $align, $text) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    text-align: $text;
+  }
+
+.left-center {
+    @include left-center(column, center, flex-start, left )
+}

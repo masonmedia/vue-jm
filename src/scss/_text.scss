@@ -11,18 +11,19 @@ h4, .h4,
   .site-title {
     font-size: 13vmin;
     font-weight: 900;
-    line-height: 85%;
-    letter-spacing: -2px;
+    // line-height: 85%;
+    line-height: 74%;
+    letter-spacing: -7px;
     // letter-spacing: -3px;
     margin: 0;
     // -webkit-text-stroke: 3px #343a40;
     -webkit-text-stroke: 1px #343a40;
-    text-shadow: 1px 1px 5px #DCD2C8, 3px 3px 10px #DCD2C8, 6px 6px 5px #DCD2C8;
+    // text-shadow: 1px 1px 5px #DCD2C8, 3px 3px 10px #DCD2C8, 6px 6px 5px #DCD2C8;
   }
  
   .site-title-stroke {
     color: transparent;
-    font-size: 15vmin;
+    font-size: 13vmin;
     font-weight: 900;
     line-height: 74%;
     letter-spacing: -7px;
@@ -30,15 +31,16 @@ h4, .h4,
     -webkit-text-stroke: 1px #343a40;
   }
   
-  .site-sub-title {
+  .site-subtitle {
     letter-spacing: -1px;
     line-height: 100%;
-    text-shadow: 1px 1px 5px #DCD2C8, 3px 3px 10px #DCD2C8, 6px 6px 5px #DCD2C8;
+    font-size: 5vmin;
+    // text-shadow: 1px 1px 5px #DCD2C8, 3px 3px 10px #DCD2C8, 6px 6px 5px #DCD2C8;
   }
   
   .section-title {
     font-size: 48px;
-    font-size: 7vmin;
+    // font-size: 7vmin;
     font-weight: 900;
     line-height: 100%;
     letter-spacing: -2px;
