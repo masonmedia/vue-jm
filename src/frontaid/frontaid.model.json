@@ -269,8 +269,7 @@
         ":type": "line"
       },
       "text": {
-        ":type": "text",
-        ":richtext": true
+        ":type": "text"
       },
       "btn": {
         ":type": "line"
