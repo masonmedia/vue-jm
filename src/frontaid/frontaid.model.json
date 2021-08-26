@@ -285,7 +285,7 @@
       }
     },
 
-    "section_9": {
+    "footer": {
       ":description": "Footer",
       "text": {
         ":type": "text"
