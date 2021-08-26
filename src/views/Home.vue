@@ -108,6 +108,7 @@
     :btn="data.section_7.btn"></section-component>
 
     <section-component :level="2"
+    :rowClass="p-5"
     :img1="data.section_8.img1"
     :img2="data.section_8.img2"></section-component>
 
