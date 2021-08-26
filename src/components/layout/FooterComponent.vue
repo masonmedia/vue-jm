@@ -4,7 +4,7 @@
         <!-- full width text section -->
         <b-row align-v="center" class="bg-dark">
             <b-col lg="8" offset-lg="2" align-self="center" class="text-center p-5">
-                <p class="my-3" v-html="text"></p>
+                <p class="my-3" v-html="data.footer.text"></p>
             </b-col>
         </b-row>
         
