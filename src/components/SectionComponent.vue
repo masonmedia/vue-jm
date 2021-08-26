@@ -52,7 +52,7 @@
         <b-row v-if="level === 5" align-v="center" class="bg-dark">
             <b-col lg="8" offset-lg="2" align-self="center" class="text-center text-light p-5">
                 <h2 class="section-title" v-html="title"></h2>
-                <p class="my-4" v-html="text"></p>
+                <p class="mb-4 mt-2" v-html="text"></p>
                 <b-button variant="info" v-html="btn"></b-button>         
             </b-col>
         </b-row>
