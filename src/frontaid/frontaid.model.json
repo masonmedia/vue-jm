@@ -265,9 +265,6 @@
 
     "section_7": {
       ":description": "Contact section",
-      "microTitle": {
-        ":type": "line"
-      },
       "title": {
         ":type": "line"
       },
