@@ -102,7 +102,8 @@
       "btn": "Contact"
     },
     "section_8": {
-      "img": "jm_jumping_beach_min.jpg"
+      "img": "jm_jumping_beach_min.jpg",
+      "img1": "jm_jumping_beach_min.jpg"
     },
     "footer": {
       "text": "© Jen Mason Consulting 2021"
