@@ -95,6 +95,11 @@
     },
     "section_6": {
       "img1": "jm_headshot_crop.jpg"
+    },
+    "section_7": {
+      "title": "Get in touch!",
+      "text": "<p>Drop me a line for more information or to discuss your next project.</p>",
+      "btn": "Contact"
     }
   }
 }
