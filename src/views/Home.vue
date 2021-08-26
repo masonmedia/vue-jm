@@ -101,6 +101,15 @@
     <section-component :level="2"
     :img1="data.section_6.img1"
     :img2="data.section_6.img2"></section-component>
+    
+    <section-component :level="5"
+    :title="data.section_7.title"
+    :text="data.section_7.text"
+    :btn="data.section_7.btn"></section-component>
+
+    <section-component :level="2"
+    :img1="data.section_8.img1"
+    :img2="data.section_8.img2"></section-component>
 
   </b-container>
 

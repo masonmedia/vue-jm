@@ -12,7 +12,7 @@
         </b-row>
         
         <!-- full width img section -->
-        <b-row v-else-if="level === 2" align-v="center" class="min-vh-75">
+        <b-row v-else-if="level === 2" align-v="center" :class="rowClass">
             <b-col lg="12" align-self="stretch" class="p-0">
                 <b-img v-if="img1" :src="require(`@/assets/img/${img1}`)" fluid class="img-full min-vh-50"></b-img>
                 <b-img v-else :src="img2" fluid class="img-full min-vh-50"></b-img>
@@ -46,6 +46,14 @@
                 <h2 class="h1 font-weight-bold" v-html="title"></h2>
                 <p class="my-4" v-html="text"></p>
                 <b-icon icon="arrow-down" font-scale="2" variant="dark"></b-icon>
+            </b-col>
+        </b-row>
+
+        <b-row v-if="level === 5" align-v="center" class="bg-dark">
+            <b-col lg="8" offset-lg="2" align-self="center" class="text-center text-light p-5">
+                <h2 class="section-title" v-html="title"></h2>
+                <p class="my-4" v-html="text"></p>
+                <b-button variant="info" v-html="btn"></b-button>         
             </b-col>
         </b-row>
 
