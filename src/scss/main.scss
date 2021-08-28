@@ -18,6 +18,14 @@ body {
     // background: #d6d6d680;
 }
 
+html {
+    font-size: calc(60% + 0.8vmin);
+  }
+
+  * {
+      font-size: 1rem;
+  }
+
 .text-focus-in {
 	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;

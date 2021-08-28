@@ -91,6 +91,8 @@
     :img2="item.img2"
     ></section-component>
 
+  <!-- about jen -->
+
     <section-component :level="1"
     id="about"
     :microTitle="data.section_5.microTitle"
