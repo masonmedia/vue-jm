@@ -9,26 +9,22 @@
       "menu_links": [{
           ":description": "Menu links.",
           "text": {
-            ":type": "line",
-            ":richtext": true
+            ":type": "line"
           }
         },
         {
           "text": {
-            ":type": "line",
-            ":richtext": true
+            ":type": "line"
           }
         },
         {
           "text": {
-            ":type": "line",
-            ":richtext": true
+            ":type": "line"
           }
         },
         {
           "text": {
-            ":type": "line",
-            ":richtext": true
+            ":type": "line"
           }
         }
       ]
