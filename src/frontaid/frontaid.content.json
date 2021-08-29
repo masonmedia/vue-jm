@@ -1,25 +1,4 @@
 {
-  "menu": {
-    "brand": "<strong>jen mason consulting</strong>",
-    "menu_links": [
-      {
-        "text": "Mission",
-        "link": "#mission"
-      },
-      {
-        "text": "Services",
-        "link": "#services"
-      },
-      {
-        "text": "About",
-        "link": "#about"
-      },
-      {
-        "text": "Contact",
-        "link": "#contact"
-      }
-    ]
-  },
   "page_1": {
     "banner": {
       "title": "Jen <br>Mason <br>Consulting",
