@@ -85,6 +85,27 @@
     },
     "footer": {
       "text": "© Jen Mason Consulting 2021"
+    },
+    "menu": {
+      "menu_links": [
+        {
+          "text": "Mission",
+          "link": "#mission"
+        },
+        {
+          "text": "Services",
+          "link": "#services"
+        },
+        {
+          "text": "About",
+          "link": "#about"
+        },
+        {
+          "text": "Contact",
+          "link": "#contact"
+        }
+      ],
+      "brand": "Jen Mason Consulting"
     }
   }
 }
