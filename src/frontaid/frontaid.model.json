@@ -4,8 +4,7 @@
     "menu": {
       ":description": "Website menu",
       "brand": {
-        ":type": "line",
-        ":richtext": true
+        ":type": "line"
       },
       "menu_links": [{
           ":description": "Menu links.",
