@@ -10,20 +10,32 @@
           ":description": "Menu links.",
           "text": {
             ":type": "line"
-          }
-        },
-        {
-          "text": {
+          },
+          "link": {
             ":type": "line"
           }
         },
         {
           "text": {
             ":type": "line"
+          },
+          "link": {
+            ":type": "line"
           }
         },
         {
           "text": {
+            ":type": "line"
+          },
+          "link": {
+            ":type": "line"
+          }
+        },
+        {
+          "text": {
+            ":type": "line"
+          },
+          "link": {
             ":type": "line"
           }
         }
