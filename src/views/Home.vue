@@ -16,6 +16,13 @@
       </b-col>
     </b-row>
 
+    <section v-if="errored">
+      <p>We're sorry, we're not able to retrieve this information at the moment, please try back later</p>
+    </section>
+
+    <div v-if="loading">Loading...</div>
+
+    <div class="" v-else>
     <section-component :level="1"
     id="mission"
     :microTitle="data.section_1.microTitle"
@@ -110,16 +117,17 @@
     :btn="data.section_7.btn"></section-component>
 
     <section-component :level="2"
-    :rowClass="p-5"
     :img1="data.section_8.img1"
     :img2="data.section_8.img2"></section-component>
 
+    </div>
   </b-container>
 
 </template>
 
 <script>
-import data from '../frontaid/frontaid.content.json'
+// import data from '../frontaid/frontaid.content.json'
+import axios from 'axios'
 import SectionComponent from '../components/SectionComponent.vue'
 
 export default {
@@ -129,7 +137,10 @@ export default {
   },
   data() {
     return {
-      data: data.page_1,
+      data: [],
+      // data: data.page_1,
+      loading: true,
+      errored: false
     }
   },
   methods: {
@@ -140,5 +151,19 @@ export default {
             this.leftLayout = false;
         },
     },
+    mounted () {
+      const url = "https://simplejsoncms.com/api/ovi1p6mj138"
+      axios
+        .get(url)
+        .then(response => {
+          this.data = response.data.page_1
+          console.log(this.data)
+        })
+        .catch(error => {
+          console.log(error)
+          this.errored = true
+        })
+        .finally(() => this.loading = false)
+  }
 }
 </script>
