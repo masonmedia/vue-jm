@@ -16,13 +16,13 @@
       </b-col>
     </b-row>
 
-    <section v-if="errored">
+    <!-- <section v-if="errored">
       <p>We're sorry, we're not able to retrieve this information at the moment, please try back later</p>
-    </section>
+    </section> -->
 
-    <div v-if="loading">Loading...</div>
+    <!-- <div v-if="loading">Loading...</div> -->
 
-    <div class="" v-else>
+    <div class="">
     <section-component :level="1"
     id="mission"
     :microTitle="data.section_1.microTitle"
@@ -36,6 +36,7 @@
 
     <section-component :level="1"
     id="services"
+    rowClass="red"
     :microTitle="data.section_3.microTitle"
     :title="data.section_3.title"
     :text="data.section_3.text"
@@ -44,7 +45,6 @@
     <!-- services -->
 
     <section-component :level="3"
-    id="services"
     v-for="item in data.section_4.services.slice(0,1)" :key="item.id"
     :microTitle="item.microTitle"
     :title="item.title"
@@ -126,44 +126,83 @@
 </template>
 
 <script>
-// import data from '../frontaid/frontaid.content.json'
-import axios from 'axios'
+import data from '../frontaid/frontaid.content.json'
+// import axios from 'axios'
 import SectionComponent from '../components/SectionComponent.vue'
+// import { animations } from "@/mixins/animations";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default {
   name: 'Home',
+  // mixins: [animations],
   components:{
     SectionComponent,
   },
   data() {
     return {
-      data: [],
-      // data: data.page_1,
-      loading: true,
-      errored: false
+      data: data.page_1,
+      // data: [],
+      // loading: true,
+      // errored: false
     }
   },
   methods: {
-        leftLayout() {
-            this.leftLayout = true;
+    // anim1() {
+    //   gsap.to(".red", {
+    //     scrollTrigger: {
+    //       trigger: ".red",
+    //       toggleActions: "restart pause reverse pause"
+    //     }, 
+    //     duration: 1, 
+    //     backgroundColor: "#FFA500", 
+    //     ease: "ease-"
+    //   });
+    // },
+    background(bgColor) {
+          gsap.to(".red", {
+            scrollTrigger: {
+              trigger: ".red",
+              toggleActions: "restart pause reverse pause"
+            }, 
+            duration: 1, 
+            // backgroundColor: "#FFA500", 
+            backgroundColor: bgColor, 
+            ease: "none"
+          });
         },
-        rightLayout() {
-            this.leftLayout = false;
-        },
-    },
+        staggerUp() {
+            gsap.defaults({ease: "power1"});
+            // gsap.set(".up", {y: 100});
+
+            ScrollTrigger.batch(".up", {
+              //interval: 0.1, // time window (in seconds) for batching to occur. 
+              //batchMax: 3,   // maximum batch size (targets)
+              onEnter: batch => gsap.to(batch, {opacity: 1, y: 0, stagger: {each: 0.15, grid: [1, 3]}, overwrite: true}),
+              onLeave: batch => gsap.set(batch, {opacity: 0, y: -100, overwrite: true}),
+              onEnterBack: batch => gsap.to(batch, {opacity: 1, y: 0, stagger: 0.15, overwrite: true}),
+              onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 100, overwrite: true})
+              // you can also define things like start, end, etc.
+            });
+        }
+  },
     mounted () {
-      const url = "https://simplejsoncms.com/api/ovi1p6mj138"
-      axios
-        .get(url)
-        .then(response => {
-          this.data = response.data.page_1
-          console.log(this.data)
-        })
-        .catch(error => {
-          console.log(error)
-          this.errored = true
-        })
-        .finally(() => this.loading = false)
+      this.background("#E9E9E9");
+      this.staggerUp();
+      // const url = "https://simplejsoncms.com/api/ovi1p6mj138"
+      // axios
+      //   .get(url)
+      //   .then(response => {
+      //     this.data = response.data.page_1
+      //     console.log(this.data)
+      //   })
+      //   .catch(error => {
+      //     console.log(error)
+      //     this.errored = true
+      //   })
+      //   .finally(() => this.loading = false)
   }
 }
 </script>
