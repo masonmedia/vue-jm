@@ -1,12 +1,12 @@
 <template>
   <b-container fluid class="p-0">
-    <b-row align-v="center" class="min-vh-100 relative mt-5">
+    <b-row id="banner" align-v="center" class="min-vh-100 relative mt-5">
       <div class="bg-sand absolute z-0 left bottom w-md-50 h-100"></div>
       <b-col lg="6" class="left-center text-left p-5 mt-4 mt-lg-0 min-vh-75"> 
-        <h1 class="site-title text-dark text-focus-in font-weight-bold" v-html="data.banner.title"></h1>
+        <h1 class="site-title text-dark font-weight-bold" v-html="data.banner.title"></h1>
         <h3 class="site-subtitle text-focus-in text-dark my-3" v-html="data.banner.subtitle"></h3>
-        <div class="d-inline-block">
-        <b-button href="#mission" variant="outline-dark" class="mr-2" v-html="data.banner.btn1"></b-button>
+        <div class="d-inline-block banner-cta">
+        <b-button href="#mission" variant="outline-dark" class="up mr-2" v-html="data.banner.btn1"></b-button>
         <b-button variant="dark" v-html="data.banner.btn2"></b-button>
         </div>
       </b-col>
@@ -25,6 +25,7 @@
     <div class="">
     <section-component :level="1"
     id="mission"
+    rowClass="light"
     :microTitle="data.section_1.microTitle"
     :title="data.section_1.title"
     :text="data.section_1.text"
@@ -36,7 +37,7 @@
 
     <section-component :level="1"
     id="services"
-    rowClass="red"
+    rowClass="linen"
     :microTitle="data.section_3.microTitle"
     :title="data.section_3.title"
     :text="data.section_3.text"
@@ -129,7 +130,7 @@
 import data from '../frontaid/frontaid.content.json'
 // import axios from 'axios'
 import SectionComponent from '../components/SectionComponent.vue'
-// import { animations } from "@/mixins/animations";
+import { animations } from "@/mixins/animations";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -137,7 +138,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default {
   name: 'Home',
-  // mixins: [animations],
+  mixins: [animations],
   components:{
     SectionComponent,
   },
@@ -150,47 +151,8 @@ export default {
     }
   },
   methods: {
-    // anim1() {
-    //   gsap.to(".red", {
-    //     scrollTrigger: {
-    //       trigger: ".red",
-    //       toggleActions: "restart pause reverse pause"
-    //     }, 
-    //     duration: 1, 
-    //     backgroundColor: "#FFA500", 
-    //     ease: "ease-"
-    //   });
-    // },
-    background(bgColor) {
-          gsap.to(".red", {
-            scrollTrigger: {
-              trigger: ".red",
-              toggleActions: "restart pause reverse pause"
-            }, 
-            duration: 1, 
-            // backgroundColor: "#FFA500", 
-            backgroundColor: bgColor, 
-            ease: "none"
-          });
-        },
-        staggerUp() {
-            gsap.defaults({ease: "power1"});
-            // gsap.set(".up", {y: 100});
-
-            ScrollTrigger.batch(".up", {
-              //interval: 0.1, // time window (in seconds) for batching to occur. 
-              //batchMax: 3,   // maximum batch size (targets)
-              onEnter: batch => gsap.to(batch, {opacity: 1, y: 0, stagger: {each: 0.15, grid: [1, 3]}, overwrite: true}),
-              onLeave: batch => gsap.set(batch, {opacity: 0, y: -100, overwrite: true}),
-              onEnterBack: batch => gsap.to(batch, {opacity: 1, y: 0, stagger: 0.15, overwrite: true}),
-              onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 100, overwrite: true})
-              // you can also define things like start, end, etc.
-            });
-        }
   },
     mounted () {
-      this.background("#E9E9E9");
-      this.staggerUp();
       // const url = "https://simplejsoncms.com/api/ovi1p6mj138"
       // axios
       //   .get(url)

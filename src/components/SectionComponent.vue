@@ -13,21 +13,22 @@
         
         <!-- full width img section -->
         <b-row v-else-if="level === 2" align-v="center" :class="rowClass">
-            <b-col lg="12" align-self="stretch" class="p-0">
-                <b-img v-if="img1" :src="require(`@/assets/img/${img1}`)" fluid class="img-full min-vh-50"></b-img>
+            <b-col lg="12" align-self="stretch" class="fade p-0">
+                <b-img v-if="img1" :src="require(`@/assets/img/${img1}`)" fluid 
+                class="img-full min-vh-50"></b-img>
                 <b-img v-else :src="img2" fluid class="img-full min-vh-50"></b-img>
             </b-col>
         </b-row>
 
         <!-- 50-50 text-img section -->
-        <b-row v-else-if="level === 3" align-v="center" class="min-vh-75 bg-light" :class="rowClass">
+        <b-row v-else-if="level === 3" align-v="center" class="bg-light" :class="rowClass">
             <b-col lg="6" align-self="center" class="text-left p-5">
                 <h6 class="up small text-uppercase" v-html="microTitle"></h6>
                 <h2 class="up h1 font-weight-bold" v-html="title"></h2>
                 <p class="up my-4" v-html="text"></p>
                 <b-icon icon="arrow-down" font-scale="2" variant="dark" class="up"></b-icon>
             </b-col>
-            <b-col lg="6" align-self="stretch" class="p-0" :class="colClass">
+            <b-col lg="6" align-self="stretch" class="fade p-0" :class="colClass">
                 <b-img v-if="img1" :src="require(`@/assets/img/${img1}`)" fluid 
                 class="img-full min-vh-50"
                 :class="imgClass"></b-img>
@@ -36,9 +37,10 @@
         </b-row>
         
         <!-- 50-50 img-text section -->
-        <b-row v-else-if="level === 4" align-v="center" class="min-vh-75 bg-linen" :class="rowClass">
-            <b-col lg="6" align-self="stretch" class="p-0">
-                <b-img v-if="img1" :src="require(`@/assets/img/${img1}`)" fluid class="img-full min-vh-50"></b-img>
+        <b-row v-else-if="level === 4" align-v="center" class="bg-linen" :class="rowClass">
+            <b-col lg="6" align-self="stretch" class="fade p-0" :class="colClass">
+                <b-img v-if="img1" :src="require(`@/assets/img/${img1}`)" fluid 
+                class="img-full min-vh-50"></b-img>
                 <b-img v-else :src="img2" fluid class="img-full min-vh-50"></b-img>
             </b-col>
             <b-col lg="6" align-self="center" class="text-left p-5">
@@ -51,9 +53,9 @@
 
         <b-row v-if="level === 5" align-v="center" class="bg-dark">
             <b-col lg="8" offset-lg="2" align-self="center" class="text-center text-light p-5">
-                <h2 class="section-title" v-html="title"></h2>
-                <p class="mb-4 mt-2" v-html="text"></p>
-                <b-button variant="info" v-html="btn"></b-button>         
+                <h2 class="up section-title" v-html="title"></h2>
+                <p class="up mb-4 mt-2" v-html="text"></p>
+                <b-button variant="info" v-html="btn" class="up"></b-button>         
             </b-col>
         </b-row>
 
@@ -63,15 +65,6 @@
 <script>
 export default {
     name: 'SectionComponent',
-    // props: [
-    //     'microTitle',
-    //     'title',
-    //     'text',
-    //     'cta',
-    //     'textClass',
-    //     'imgClass',
-    //     'imgUrl'
-    // ],
     props: {
         level: {
         type: Number,
