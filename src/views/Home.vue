@@ -1,20 +1,12 @@
 <template>
   <b-container fluid class="p-0">
-    <b-row id="banner" align-v="center" class="min-vh-100 relative mt-5">
-      <div class="bg-sand absolute z-0 left bottom w-md-50 h-100"></div>
-      <b-col lg="6" class="left-center text-left p-5 mt-4 mt-lg-0 min-vh-75"> 
-        <h1 class="site-title text-dark font-weight-bold" v-html="data.banner.title"></h1>
-        <h3 class="site-subtitle text-focus-in text-dark my-3" v-html="data.banner.subtitle"></h3>
-        <div class="d-inline-block banner-cta">
-        <b-button href="#mission" variant="outline-dark" class="up mr-2" v-html="data.banner.btn1"></b-button>
-        <b-button variant="dark" v-html="data.banner.btn2"></b-button>
-        </div>
-      </b-col>
-      <b-col lg="6" align-self="stretch" class="p-0">
-       <b-img v-if="data.banner.img1" :src="require(`@/assets/img/${data.banner.img1}`)" fluid class="img-full min-vh-50"></b-img>
-       <b-img v-else :src="data.banner.img2" fluid class="img-full min-vh-50"></b-img>
-      </b-col>
-    </b-row>
+    <banner-component
+    :title="data.banner.title"
+    :subtitle="data.banner.subtitle"
+    :btn1="data.banner.btn1"
+    :btn2="data.banner.btn2"
+    :img1="data.banner.img1"
+    ></banner-component>
 
     <!-- <section v-if="errored">
       <p>We're sorry, we're not able to retrieve this information at the moment, please try back later</p>
@@ -129,8 +121,9 @@
 <script>
 import data from '../frontaid/frontaid.content.json'
 // import axios from 'axios'
+import BannerComponent from '../components/layout/BannerComponent.vue'
 import SectionComponent from '../components/SectionComponent.vue'
-import { animations } from "@/mixins/animations";
+import { intersection } from "@/mixins/intersection";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -138,8 +131,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default {
   name: 'Home',
-  mixins: [animations],
+  mixins: [intersection],
   components:{
+    BannerComponent,
     SectionComponent,
   },
   data() {
@@ -153,7 +147,8 @@ export default {
   methods: {
   },
     mounted () {
-      // const url = "https://simplejsoncms.com/api/ovi1p6mj138"
+      // editor link https://simplejsoncms.com/editor/ovymt8uqtx
+      // const url = "https://simplejsoncms.com/api/ovymt8uqtx"
       // axios
       //   .get(url)
       //   .then(response => {

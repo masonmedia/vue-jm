@@ -4,16 +4,16 @@
         <!-- full width text section -->
         <b-row v-if="level === 1" align-v="center" class="min-vh-75" :class="rowClass">
             <b-col lg="8" offset-lg="2" align-self="center" class="text-center p-5">
-                <h5 class="up text-uppercase font-weight-bold" v-html="microTitle"></h5>
-                <h2 class="up section-title" v-html="title"></h2>
-                <p class="up my-4" v-html="text"></p>
-                <b-button variant="info" v-html="btn" class="up"></b-button>
+                <h5 class="animate text-uppercase font-weight-bold" data-animate="fade-up 1s" v-html="microTitle"></h5>
+                <h2 class="animate section-title" data-animate="fade-up 1s" v-html="title"></h2>
+                <p class="animate my-4" data-animate="fade-up 1s" v-html="text"></p>
+                <b-button variant="info" v-html="btn" class="animate"></b-button>
             </b-col>
         </b-row>
         
         <!-- full width img section -->
         <b-row v-else-if="level === 2" align-v="center" :class="rowClass">
-            <b-col lg="12" align-self="stretch" class="fade p-0">
+            <b-col lg="12" align-self="stretch" class="animate p-0" :data-animate="fade">
                 <b-img v-if="img1" :src="require(`@/assets/img/${img1}`)" fluid 
                 class="img-full min-vh-50"></b-img>
                 <b-img v-else :src="img2" fluid class="img-full min-vh-50"></b-img>
@@ -23,12 +23,12 @@
         <!-- 50-50 text-img section -->
         <b-row v-else-if="level === 3" align-v="center" class="bg-light" :class="rowClass">
             <b-col lg="6" align-self="center" class="text-left p-5">
-                <h6 class="up small text-uppercase" v-html="microTitle"></h6>
-                <h2 class="up h1 font-weight-bold" v-html="title"></h2>
-                <p class="up my-4" v-html="text"></p>
-                <b-icon icon="arrow-down" font-scale="2" variant="dark" class="up"></b-icon>
+                <h6 class="animate small text-uppercase" data-animate="fade-up 1s" v-html="microTitle"></h6>
+                <h2 class="animate h1 font-weight-bold" data-animate="fade-up 1s" v-html="title"></h2>
+                <p class="animate my-4" data-animate="fade-up 1s" v-html="text"></p>
+                <b-icon icon="arrow-down" font-scale="2" variant="dark" class="animate" data-animate="fade-up 1s"></b-icon>
             </b-col>
-            <b-col lg="6" align-self="stretch" class="fade p-0" :class="colClass">
+            <b-col lg="6" align-self="stretch" class="animate p-0" :class="colClass" :data-animate="fade">
                 <b-img v-if="img1" :src="require(`@/assets/img/${img1}`)" fluid 
                 class="img-full min-vh-50"
                 :class="imgClass"></b-img>
@@ -38,24 +38,24 @@
         
         <!-- 50-50 img-text section -->
         <b-row v-else-if="level === 4" align-v="center" class="bg-linen" :class="rowClass">
-            <b-col lg="6" align-self="stretch" class="fade p-0" :class="colClass">
+            <b-col lg="6" align-self="stretch" class="animate p-0" :class="colClass" :data-animate="fade">
                 <b-img v-if="img1" :src="require(`@/assets/img/${img1}`)" fluid 
                 class="img-full min-vh-50"></b-img>
                 <b-img v-else :src="img2" fluid class="img-full min-vh-50"></b-img>
             </b-col>
             <b-col lg="6" align-self="center" class="text-left p-5">
-                <h6 class="up small text-uppercase" v-html="microTitle"></h6>
-                <h2 class="up h1 font-weight-bold" v-html="title"></h2>
-                <p class="up my-4" v-html="text"></p>
-                <b-icon icon="arrow-down" font-scale="2" variant="dark" class="up"></b-icon>
+                <h6 class="animate small text-uppercase" data-animate="fade-up 1s" v-html="microTitle"></h6>
+                <h2 class="animate h1 font-weight-bold" data-animate="fade-up 1s" v-html="title"></h2>
+                <p class="animate my-4" data-animate="fade-up 1s" v-html="text"></p>
+                <b-icon icon="arrow-down" font-scale="2" variant="dark" class="animate" data-animate="fade-up 1s"></b-icon>
             </b-col>
         </b-row>
 
         <b-row v-if="level === 5" align-v="center" class="bg-dark">
             <b-col lg="8" offset-lg="2" align-self="center" class="text-center text-light p-5">
-                <h2 class="up section-title" v-html="title"></h2>
-                <p class="up mb-4 mt-2" v-html="text"></p>
-                <b-button variant="info" v-html="btn" class="up"></b-button>         
+                <h2 class="animate section-title" data-animate="fade-up 1s" v-html="title"></h2>
+                <p class="animate mb-4 mt-2" data-animate="fade-up 1s" v-html="text"></p>
+                <b-button variant="info" v-html="btn" class="animate" data-animate="fade-up 1s"></b-button>         
             </b-col>
         </b-row>
 
@@ -63,8 +63,11 @@
 </template>
 
 <script>
+import {intersection} from '@/mixins/intersection'
+
 export default {
     name: 'SectionComponent',
+    mixins: [intersection],
     props: {
         level: {
         type: Number,
@@ -81,25 +84,8 @@ export default {
         rowClass: String,
         colClass: String,
         imgClass: String,
-        
     },
-    data() {
-        return {
-            leftLayout: null,
-            article:{
-                "title": "Article title",
-                "description": "Lorem ipsum is the description",
-                "id": 1
-            }
-        }
-    },
-    // methods: {
-    //     leftLayout() {
-    //         this.leftLayout = true;
-    //     },
-    //     rightLayout() {
-    //         this.leftLayout = false;
-    //     }
-    // }
+    methods: {
+    }
 }
 </script>

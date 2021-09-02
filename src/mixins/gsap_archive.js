@@ -19,3 +19,26 @@
 //     .from(".bg-sand", {opacity: 0})
 //     .from("img", {opacity: 0});
 // },
+
+// bgLight() {
+//     gsap.to('.light', {
+//       scrollTrigger: {
+//         trigger: ".light",
+//         toggleActions: "restart pause reverse pause"
+//       }, 
+//       duration: 1, 
+//       backgroundColor: "#f8f9fa", 
+//       ease: "none"
+//     });
+//   },
+//   bgLinen() {
+//     gsap.to(".linen", {
+//       scrollTrigger: {
+//         trigger: ".linen",
+//         toggleActions: "restart pause reverse pause"
+//       }, 
+//       duration: 1, 
+//       backgroundColor: "#E9E9E9", 
+//       ease: "none"
+//     });
+//   },
