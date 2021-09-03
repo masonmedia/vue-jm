@@ -34,6 +34,27 @@ $ease: cubic-bezier(0.390, 0.575, 0.565, 1.000);
  * ----------------------------------------
  */
 
+ .page-fade {
+  animation: page-fade 1.5s $ease forwards;
+}
+
+@-webkit-keyframes page-fade {
+   0% {
+     opacity: 0;
+   }
+   100% {
+     opacity: 1;
+   }
+ }
+ @keyframes page-fade {
+   0% {
+     opacity: 0;
+   }
+   100% {
+     opacity: 1;
+   }
+ }
+
  .fade-in {
    animation: fade-in .5s $ease forwards;
 }
@@ -260,6 +281,42 @@ $ease: cubic-bezier(0.390, 0.575, 0.565, 1.000);
             filter: blur(12px) opacity(0%);
   }
 }
+
+.text-focus-in {
+	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+/**
+ * ----------------------------------------
+ * animation text-focus-in
+ * ----------------------------------------
+ */
+ @-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
 
 
 @media (prefers-reduced-motion) {

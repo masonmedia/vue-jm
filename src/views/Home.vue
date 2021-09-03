@@ -119,8 +119,8 @@
 </template>
 
 <script>
-import data from '../frontaid/frontaid.content.json'
-// import axios from 'axios'
+// import data from '../frontaid/frontaid.content.json'
+import axios from 'axios'
 import BannerComponent from '../components/layout/BannerComponent.vue'
 import SectionComponent from '../components/SectionComponent.vue'
 import { intersection } from "@/mixins/intersection";
@@ -138,28 +138,28 @@ export default {
   },
   data() {
     return {
-      data: data.page_1,
-      // data: [],
-      // loading: true,
-      // errored: false
+      // data: data.page_1,
+      data: [],
+      loading: true,
+      errored: false
     }
   },
   methods: {
   },
     mounted () {
       // editor link https://simplejsoncms.com/editor/ovymt8uqtx
-      // const url = "https://simplejsoncms.com/api/ovymt8uqtx"
-      // axios
-      //   .get(url)
-      //   .then(response => {
-      //     this.data = response.data.page_1
-      //     console.log(this.data)
-      //   })
-      //   .catch(error => {
-      //     console.log(error)
-      //     this.errored = true
-      //   })
-      //   .finally(() => this.loading = false)
+      const url = "https://simplejsoncms.com/api/ovymt8uqtx"
+      axios
+        .get(url)
+        .then(response => {
+          this.data = response.data.page_1
+          console.log(this.data)
+        })
+        .catch(error => {
+          console.log(error)
+          this.errored = true
+        })
+        .finally(() => this.loading = false)
   }
 }
 </script>
