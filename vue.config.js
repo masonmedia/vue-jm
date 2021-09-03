@@ -1,3 +1,3 @@
-// module.exports = {
-//     publicPath: '/vue-jm'
-// }
+module.exports = {
+    publicPath: '/vue-jm'
+}
