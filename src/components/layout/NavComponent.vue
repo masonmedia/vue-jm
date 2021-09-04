@@ -1,7 +1,8 @@
 <template>
     <div>
         <b-navbar toggleable="lg" fixed="top" type="dark" variant="dark" class="py-3 px-4">
-            <b-navbar-brand href="#" v-html="data.menu.brand"></b-navbar-brand>
+            <!-- <b-navbar-brand href="#" v-html="data.menu.brand"></b-navbar-brand> -->
+            <router-link class="nav-link navbar-brand" to="/" v-html="data.menu.brand"></router-link>
             <b-navbar-toggle target="nav-collapse">
                 <span class="">
               <!-- plus icon -->

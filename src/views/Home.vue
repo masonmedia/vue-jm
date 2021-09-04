@@ -15,9 +15,23 @@
     <!-- <div v-if="loading">Loading...</div> -->
 
     <div class="">
+
+    <div class="absolute z-0" style="width: 400px; height: 400px; background: #EBEBEB; border-radius: 100%" v-rellax="{
+      // See: https://github.com/dixonandmoe/rellax#features
+      speed: -2,
+    }"></div>
+    <div class="absolute z-0 right" style="width: 300px; height: 300px; background: #C3C2C2; border-radius: 100%;" v-rellax="{
+      // See: https://github.com/dixonandmoe/rellax#features
+      speed: -1,
+    }"></div>
+    <div class="absolute z-0" style="width: 200px; height: 200px; background: #E1E0E0; border-radius: 100%" v-rellax="{
+      // See: https://github.com/dixonandmoe/rellax#features
+      speed: -0,
+    }"></div>
+
     <section-component :level="1"
     id="mission"
-    rowClass="light"
+    rowClass="bg-light"
     :microTitle="data.section_1.microTitle"
     :title="data.section_1.title"
     :text="data.section_1.text"
@@ -124,10 +138,7 @@ import axios from 'axios'
 import BannerComponent from '../components/layout/BannerComponent.vue'
 import SectionComponent from '../components/SectionComponent.vue'
 import { intersection } from "@/mixins/intersection";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+// import { animations } from '@/mixins/animations'
 
 export default {
   name: 'Home',
@@ -141,12 +152,16 @@ export default {
       // data: data.page_1,
       data: [],
       loading: true,
-      errored: false
+      errored: false,
+      rellax: {
+      speed: -1
+    }
     }
   },
   methods: {
   },
     mounted () {
+
       // editor link https://simplejsoncms.com/editor/ovymt8uqtx
       const url = "https://simplejsoncms.com/api/ovymt8uqtx"
       axios
@@ -163,3 +178,12 @@ export default {
   }
 }
 </script>
+
+<style>
+.circle{
+  background-color:red;
+  height: 5em;
+  width: 5em;
+  border-radius: 100%
+}
+</style>

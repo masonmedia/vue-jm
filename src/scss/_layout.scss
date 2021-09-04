@@ -1,4 +1,4 @@
-@mixin left-center($direction, $justify, $align, $text) {
+@mixin flex($direction, $justify, $align, $text) {
     display: flex;
     flex-direction: $direction;
     justify-content: $justify;
@@ -7,5 +7,9 @@
   }
 
 .left-center {
-    @include left-center(column, center, flex-start, left )
+    @include flex(column, center, flex-start, left )
+}
+
+.center-center {
+    @include flex(column, center, center, center )
 }

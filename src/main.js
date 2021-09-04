@@ -5,6 +5,9 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import '@/scss/main.scss'
+import VueRellax from 'vue-rellax'
+
+Vue.use(VueRellax)
 
 // Make BootstrapVue available throughout your project
 Vue.use(BootstrapVue)

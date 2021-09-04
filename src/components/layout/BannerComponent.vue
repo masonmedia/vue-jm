@@ -38,3 +38,12 @@ export default {
     ]
 }
 </script>
+
+<style>
+/* #banner {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  max-width: 1400px;
+} */
+</style>
