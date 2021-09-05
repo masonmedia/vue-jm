@@ -35,7 +35,7 @@ $ease: cubic-bezier(0.390, 0.575, 0.565, 1.000);
  */
 
  .page-fade {
-  animation: page-fade 1.5s $ease forwards;
+  animation: page-fade 1.5s ease-in-out forwards;
 }
 
 @-webkit-keyframes page-fade {

@@ -138,9 +138,6 @@ export default {
       // data: [],
       // loading: true,
       // errored: false,
-      rellax: {
-      speed: -1
-    }
     }
   },
   methods: {
