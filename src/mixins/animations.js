@@ -68,9 +68,27 @@ export const animations = {
         },
       },
       mounted() {
-        this.fade();
-        this.right();
-        this.staggerUp();
+        // this.fade();
+        // this.right();
+        // this.staggerUp();
+        gsap.utils.toArray('.up').forEach(up => {
+          ScrollTrigger.create({
+              trigger: up,
+              stagger: 1,
+              duration: 2,
+              ease: 'expo',
+              toggleClass: 'fade-up'
+              });
+          });
+        gsap.utils.toArray('.fade').forEach(fade => {
+          ScrollTrigger.create({
+              trigger: fade,
+              stagger: 2,
+              duration: 2,
+              ease: 'expo',
+              toggleClass: 'fade-in'
+              });
+          });
         
       }
 }

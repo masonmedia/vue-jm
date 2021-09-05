@@ -16,19 +16,6 @@
 
     <div class="">
 
-    <div class="absolute z-0" style="width: 400px; height: 400px; background: #EBEBEB; border-radius: 100%" v-rellax="{
-      // See: https://github.com/dixonandmoe/rellax#features
-      speed: -2,
-    }"></div>
-    <div class="absolute z-0 right" style="width: 300px; height: 300px; background: #C3C2C2; border-radius: 100%;" v-rellax="{
-      // See: https://github.com/dixonandmoe/rellax#features
-      speed: -1,
-    }"></div>
-    <div class="absolute z-0" style="width: 200px; height: 200px; background: #E1E0E0; border-radius: 100%" v-rellax="{
-      // See: https://github.com/dixonandmoe/rellax#features
-      speed: -0,
-    }"></div>
-
     <section-component :level="1"
     id="mission"
     rowClass="bg-light"
@@ -133,26 +120,24 @@
 </template>
 
 <script>
-// import data from '../frontaid/frontaid.content.json'
-import axios from 'axios'
+import data from '../frontaid/frontaid.content.json'
+// import axios from 'axios'
 import BannerComponent from '../components/layout/BannerComponent.vue'
 import SectionComponent from '../components/SectionComponent.vue'
-import { intersection } from "@/mixins/intersection";
-// import { animations } from '@/mixins/animations'
 
 export default {
   name: 'Home',
-  mixins: [intersection],
   components:{
     BannerComponent,
     SectionComponent,
+    // ShapesComponent,
   },
   data() {
     return {
-      // data: data.page_1,
-      data: [],
-      loading: true,
-      errored: false,
+      data: data.page_1,
+      // data: [],
+      // loading: true,
+      // errored: false,
       rellax: {
       speed: -1
     }
@@ -163,18 +148,18 @@ export default {
     mounted () {
 
       // editor link https://simplejsoncms.com/editor/ovymt8uqtx
-      const url = "https://simplejsoncms.com/api/ovymt8uqtx"
-      axios
-        .get(url)
-        .then(response => {
-          this.data = response.data.page_1
-          console.log(this.data)
-        })
-        .catch(error => {
-          console.log(error)
-          this.errored = true
-        })
-        .finally(() => this.loading = false)
+      // const url = "https://simplejsoncms.com/api/ovymt8uqtx"
+      // axios
+      //   .get(url)
+      //   .then(response => {
+      //     this.data = response.data.page_1
+      //     console.log(this.data)
+      //   })
+      //   .catch(error => {
+      //     console.log(error)
+      //     this.errored = true
+      //   })
+      //   .finally(() => this.loading = false)
   }
 }
 </script>

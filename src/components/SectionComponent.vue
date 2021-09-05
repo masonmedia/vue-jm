@@ -63,14 +63,12 @@
 </template>
 
 <script>
-import {intersection} from '@/mixins/intersection'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default {
     name: 'SectionComponent',
-    mixins: [intersection],
     props: {
         level: {
         type: Number,
@@ -93,24 +91,39 @@ export default {
     },
     mounted() {
 
-    gsap.utils.toArray('.up').forEach(up => {
-        ScrollTrigger.create({
-            trigger: up,
-            stagger: 1,
-            duration: 2,
-            ease: 'expo',
-            toggleClass: 'fade-up'
-            });
-        });
-    gsap.utils.toArray('.fade').forEach(fade => {
-        ScrollTrigger.create({
-            trigger: fade,
-            stagger: 2,
-            duration: 2,
-            ease: 'expo',
-            toggleClass: 'fade-in'
-            });
-        });
+  gsap.utils.toArray('.fade').forEach(step => {
+    ScrollTrigger.create({
+        trigger: step,
+        toggleClass: 'text-focus-in'
+    });
+  });
+  
+  gsap.utils.toArray('.up').forEach(step => {
+    ScrollTrigger.create({
+        trigger: step,
+        toggleClass: 'fade-up'
+    });
+  });
+        // gsap.utils.toArray('.up').forEach(up => {
+        //     ScrollTrigger.create({
+        //         trigger: up,
+        //         stagger: 1,
+        //         duration: 2,
+        //         ease: 'expo',
+        //         toggleClass: 'fade-up'
+        //         });
+        //     });
+    
+        //     gsap.utils.toArray('.fade').forEach(fade => {
+        //     ScrollTrigger.create({
+        //         trigger: fade,
+        //         stagger: 2,
+        //         duration: 2,
+        //         ease: 'expo',
+        //         toggleClass: 'fade-in'
+        //         });
+        //     });
+
     }
 }
 </script>
