@@ -75,8 +75,8 @@
 
     <section-component :level="3"
     v-for="item in data.section_4.services.slice(4,5)" :key="item.id"
-    colClass="relative"
-    imgClass="absolute z-0"
+    colClass=""
+    imgClass=""
     :microTitle="item.microTitle"
     :title="item.title"
     :text="item.text"
