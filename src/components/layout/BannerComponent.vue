@@ -7,12 +7,12 @@
         v-html="title"></h1>
         <h3 class="site-subtitle text-dark my-3" 
         v-html="subtitle"></h3>
-        <div class="banner-cta">
-        <b-button href="#mission" variant="outline-dark" class="mr-2"
-        v-html="btn1"></b-button>
-        <b-button variant="dark" 
-        class=""
-        v-html="btn2"></b-button>
+        <div>
+          <b-button href="#mission" variant="outline-dark" class="cta mr-2"
+          v-html="btn1"></b-button>
+          <b-button variant="dark" 
+          class="cta"
+          v-html="btn2"></b-button>
         </div>
       </b-col>
       <b-col lg="6" align-self="stretch" class="fade-in p-0">
@@ -48,7 +48,7 @@ export default {
           .from("h3", {scale: 0, opacity: 0})
           .from(".bg-circles", {scale: 0.8, rotation: -10, opacity: 0})
           .from("img", {opacity: 0})
-          .from(".btn", {y: 100, opacity: 0, stagger: 0.1})
+          .from(".cta", {y: 100, opacity: 0, stagger: 0.1})
           }
 }
 
