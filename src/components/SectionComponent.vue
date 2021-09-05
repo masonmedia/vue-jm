@@ -21,7 +21,7 @@
         </b-row>
 
         <!-- 50-50 text-img section -->
-        <b-row v-else-if="level === 3" align-v="center" class="min-vh-75 bg-light" :class="rowClass">
+        <b-row v-else-if="level === 3" align-v="center" class="hero min-vh-75 bg-light" :class="rowClass">
             <b-col lg="6" align-self="center" class="text-left p-5">
                 <h6 class="up small text-uppercase" v-html="microTitle"></h6>
                 <h2 class="up h1 font-weight-bold" v-html="title"></h2>
@@ -104,6 +104,9 @@ export default {
         toggleClass: 'fade-up'
     });
   });
+
+
+
         // gsap.utils.toArray('.up').forEach(up => {
         //     ScrollTrigger.create({
         //         trigger: up,

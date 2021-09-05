@@ -15,7 +15,7 @@
           v-html="btn2"></b-button>
         </div>
       </b-col>
-      <b-col lg="6" align-self="stretch" class="fade-in p-0">
+      <b-col lg="6" align-self="stretch" class="p-0">
        <b-img v-if="img1" :src="require(`@/assets/img/${img1}`)" fluid class="img-full min-vh-50"></b-img>
        <b-img v-else :src="img2" fluid class="img-full min-vh-50"></b-img>
       </b-col>
@@ -47,8 +47,8 @@ export default {
           .from("h1", {y: 200, opacity: 0}) //child tweens will inherit the duration and from the parent timeline!
           .from("h3", {scale: 0, opacity: 0})
           .from(".bg-circles", {scale: 0.8, rotation: -10, opacity: 0})
-          .from("img", {opacity: 0})
           .from(".cta", {y: 100, opacity: 0, stagger: 0.1})
+          .from("img", {opacity: 0})
           }
 }
 
