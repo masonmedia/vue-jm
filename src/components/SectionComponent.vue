@@ -2,7 +2,7 @@
     <section class="p-0">
 
         <!-- full width text section -->        
-        <b-row v-if="level === 1" align-v="center" class="min-vh-75" :class="rowClass" :style="rowStyle">
+        <b-row v-if="level === 1" align-v="center" class="min-vh-75 bg-circles-trans" :class="rowClass" :style="rowStyle">
             <b-col lg="8" offset-lg="2" align-self="center" class="text-center p-5">
                 <h5 class="up text-uppercase font-weight-bold" v-html="microTitle"></h5>
                 <h2 class="up section-title" v-html="title"></h2>
@@ -21,7 +21,7 @@
         </b-row>
 
         <!-- 50-50 text-img section -->
-        <b-row v-else-if="level === 3" align-v="center" class="bg-light" :class="rowClass">
+        <b-row v-else-if="level === 3" align-v="center" class="min-vh-75 bg-light" :class="rowClass">
             <b-col lg="6" align-self="center" class="text-left p-5">
                 <h6 class="up small text-uppercase" v-html="microTitle"></h6>
                 <h2 class="up h1 font-weight-bold" v-html="title"></h2>
@@ -37,7 +37,7 @@
         </b-row>
         
         <!-- 50-50 img-text section -->
-        <b-row v-else-if="level === 4" align-v="center" class="bg-linen" :class="rowClass">
+        <b-row v-else-if="level === 4" align-v="center" class="min-vh-75 bg-linen" :class="rowClass">
             <b-col lg="6" align-self="stretch" class="fade p-0" :class="colClass">
                 <b-img v-if="img1" :src="require(`@/assets/img/${img1}`)" fluid 
                 class="img-full min-vh-50"></b-img>

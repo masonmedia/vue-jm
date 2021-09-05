@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="1440" height="560" preserveAspectRatio="none" viewBox="0 0 1440 560">
+    <g clip-path="url(&quot;#SvgjsClipPath1204&quot;)" fill="none">
+        <rect width="1440" height="560" x="0" y="0" fill="rgba(220, 210, 203, 1)"></rect>
+        <circle r="93.335" cx="83.48" cy="74.67" stroke="#365aa3" stroke-opacity="0.25" stroke-width="2"></circle>
+        <circle r="93.335" cx="366.37" cy="335.31" stroke="#365aa3" stroke-opacity="0.25" stroke-width="2"></circle>
+        <circle r="93.335" cx="785.68" cy="716.86" stroke="#365aa3" stroke-opacity="0.25" stroke-width="2"></circle>
+        <circle r="59.03" cx="902.5" cy="146.81" stroke="#365aa3" stroke-opacity="0.25" stroke-width="2"></circle>
+        <circle r="108.64" cx="1229.83" cy="456.68" stroke="#365aa3" stroke-opacity="0.25" stroke-width="2"></circle>
+        <circle r="153.16" cx="980.13" cy="280.9" stroke="#365aa3" stroke-opacity="0.25" stroke-width="2"></circle>
+        <circle r="134.065" cx="1327.87" cy="530.08" stroke="#365aa3" stroke-opacity="0.25" stroke-width="2"></circle>
+        <circle r="150.095" cx="1320.88" cy="426.32" stroke="#365aa3" stroke-opacity="0.25" stroke-width="2"></circle>
+        <circle r="85.17" cx="699.22" cy="345.38" stroke="#365aa3" stroke-opacity="0.25" stroke-width="2"></circle>
+        <circle r="170.565" cx="449.9" cy="557.16" stroke="#365aa3" stroke-opacity="0.25" stroke-width="2"></circle>
+        <circle r="140.535" cx="379.55" cy="170.85" stroke="#365aa3" stroke-opacity="0.25" stroke-width="2"></circle>
+        <circle r="74.47" cx="1242.46" cy="310.47" stroke="#365aa3" stroke-opacity="0.25" stroke-width="2"></circle>
+        <circle r="185.68" cx="1047.97" cy="372.61" stroke="#365aa3" stroke-opacity="0.25" stroke-width="2"></circle>
+        <circle r="169.745" cx="1225.19" cy="221.28" stroke="#365aa3" stroke-opacity="0.25" stroke-width="2"></circle>
+        <circle r="163.435" cx="1400.36" cy="170.15" stroke="#365aa3" stroke-opacity="0.25" stroke-width="2"></circle>
+    </g>
+    <defs>
+        <clipPath id="SvgjsClipPath1204">
+            <rect width="1440" height="560" x="0" y="0"></rect>
+        </clipPath>
+    </defs>
+</svg>

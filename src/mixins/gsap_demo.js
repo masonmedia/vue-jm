@@ -8,6 +8,13 @@ gsap.registerPlugin(ScrollTrigger);
 // import {animations} from '@/mixins/animations'
 // import { staggerUp, fadeIn } from '../mixins/gsap_demo'
 
+export function banner() {
+tl.to("#banner", {duration: 1, x: 50, y: 0})
+  .from("h1", {autoAlpha: 0, y: -100})
+  .to("h3", {duration: 1, backgroundColor: "red"})
+  .to(".button-cta", {duration: 3, x: 100});
+}
+
     export function staggerUp() {
         gsap.utils.toArray('.up').forEach(up => {
             ScrollTrigger.create({
