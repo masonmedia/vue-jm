@@ -22,13 +22,13 @@
 
         <!-- 50-50 text-img section -->
         <b-row v-else-if="level === 3" align-v="center" class="hero min-vh-75 bg-light" :class="rowClass">
-            <b-col lg="6" align-self="center" class="text-left p-5">
+            <b-col lg="6" align-self="center" class="text-left p-5" order="2" order-lg="1">
                 <h6 class="up small text-uppercase" v-html="microTitle"></h6>
                 <h2 class="up h1 font-weight-bold" v-html="title"></h2>
                 <p class="up my-4" v-html="text"></p>
                 <b-icon icon="arrow-down" font-scale="2" variant="dark" class="up"></b-icon>
             </b-col>
-            <b-col lg="6" align-self="stretch" class="fade p-0" :class="colClass">
+            <b-col lg="6" align-self="stretch" class="fade p-0" :class="colClass" order="1" order-lg="2">
                 <b-img v-if="img1" :src="require(`@/assets/img/${img1}`)" fluid 
                 class="img-full min-vh-50"
                 :class="imgClass"></b-img>
