@@ -13,11 +13,16 @@
 <script>
 import FooterComponent from './components/layout/FooterComponent.vue'
 import NavComponent from './components/layout/NavComponent.vue'
+import smoothscroll from 'smoothscroll-polyfill';
 
 export default {
   components: {
     NavComponent,
     FooterComponent,
+  },
+  mounted() {
+    // kick off the polyfill!
+    smoothscroll.polyfill();
   }
 }
 </script>

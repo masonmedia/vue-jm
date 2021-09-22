@@ -56,25 +56,26 @@ $ease: cubic-bezier(0.390, 0.575, 0.565, 1.000);
  }
 
  .fade-in {
-   animation: fade-in .5s $ease forwards;
+  -webkit-animation: fade-in 1s $ease both;
+   animation: fade-in 1s $ease both;
 }
 
- @-webkit-keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
   }
-  @keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+  100% {
+    opacity: 1;
   }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 /**
  * ----------------------------------------
@@ -219,8 +220,8 @@ $ease: cubic-bezier(0.390, 0.575, 0.565, 1.000);
 }
 
 .blur {
-	-webkit-animation: blur 0.5s $ease both;
-	        animation: blur 0.5s $ease both;
+	-webkit-animation: blur 1s $ease both;
+	        animation: blur 1s $ease both;
 }
 /**
  * ----------------------------------------
@@ -283,8 +284,8 @@ $ease: cubic-bezier(0.390, 0.575, 0.565, 1.000);
 }
 
 .text-focus-in {
-	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	-webkit-animation: text-focus-in 1s $ease both;
+	        animation: text-focus-in 1s $ease both;
 }
 
 /**

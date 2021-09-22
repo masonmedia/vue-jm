@@ -7,6 +7,13 @@
 @import 'utilities';
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&display=swap');
 
+html{
+    scroll-behavior: smooth;
+    // scroll-snap-type: mandatory;
+    // scroll-snap-points-y: repeat(75vh);
+    // scroll-snap-type: y mandatory;
+   }
+
 body {
     width: 100%;
     max-width: 1400px;
@@ -19,11 +26,18 @@ body {
     // background: #d6d6d680;
 }
 
-html {
-    // font-size: calc(60% + 0.8vmin);
-    // transition: all 1s ease-out;
-  }
+// html {
+//     font-size: calc(60% + 0.8vmin);
+//     transition: all 1s ease-out;
+//   }
 
 //   * {
 //       font-size: 1rem;
+//   }
+
+// scroll snapping: https://css-tricks.com/practical-css-scroll-snapping/
+
+//   section {
+//     /* height: 100vh; */
+//     scroll-snap-align: start;
 //   }

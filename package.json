@@ -13,6 +13,7 @@
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.17.2",
     "gsap": "^3.7.1",
+    "smoothscroll-polyfill": "^0.4.4",
     "vue": "^2.6.11",
     "vue-rellax": "^0.2.0",
     "vue-router": "^3.2.0"

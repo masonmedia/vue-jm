@@ -7,13 +7,15 @@
                 <h5 class="up text-uppercase font-weight-bold" v-html="microTitle"></h5>
                 <h2 class="up section-title" v-html="title"></h2>
                 <p class="up my-4" v-html="text"></p>
-                <b-button variant="info" v-html="btn" class="up"></b-button>
+                <b-button :href="btnLink" variant="info" v-html="btn" class="up"></b-button>
+                <!-- <b-button @click="gsapDisable" variant="danger" class="up">Disable gsap</b-button> -->
+                <!-- <b-button @click="gsapEnable" variant="danger" class="up">Enable gsap</b-button> -->
             </b-col>
         </b-row>
         
         <!-- full width img section -->
-        <b-row v-else-if="level === 2" align-v="center" :class="rowClass">
-            <b-col lg="12" align-self="stretch" class="fade p-0">
+        <b-row v-else-if="level === 2" align-v="center" class="min-vh-75" :class="rowClass">
+            <b-col lg="12" align-self="stretch" class="blur p-0">
                 <b-img v-if="img1" :src="require(`@/assets/img/${img1}`)" fluid 
                 class="img-full min-vh-50"></b-img>
                 <b-img v-else :src="img2" fluid class="img-full min-vh-50"></b-img>
@@ -21,29 +23,29 @@
         </b-row>
 
         <!-- 50-50 text-img section -->
-        <b-row v-else-if="level === 3" align-v="center" class="hero min-vh-75 bg-light" :class="rowClass">
-            <b-col lg="6" align-self="center" class="text-left p-5" order="2" order-lg="1">
+        <b-row v-else-if="level === 3" align-v="center" class="min-vh-75 bg-light" :class="rowClass">
+            <b-col lg="6" class="left-center min-vh-75 bg-circles-trans p-5" order="2" order-lg="1">
                 <h6 class="up small text-uppercase" v-html="microTitle"></h6>
                 <h2 class="up h1 font-weight-bold" v-html="title"></h2>
                 <p class="up my-4" v-html="text"></p>
                 <b-icon icon="arrow-down" font-scale="2" variant="dark" class="up"></b-icon>
             </b-col>
-            <b-col lg="6" align-self="stretch" class="fade p-0" :class="colClass" order="1" order-lg="2">
+            <b-col lg="6" align-self="stretch" class="blur p-0" :class="colClass" order="1" order-lg="2">
                 <b-img v-if="img1" :src="require(`@/assets/img/${img1}`)" fluid 
-                class="img-full min-vh-50"
+                class="img-full aspect-16 min-vh-50"
                 :class="imgClass"></b-img>
-                <b-img v-else :src="img2" fluid class="img-full min-vh-50"></b-img>
+                <b-img v-else :src="img2" fluid class="img-full aspect-16 min-vh-50"></b-img>
             </b-col>
         </b-row>
         
         <!-- 50-50 img-text section -->
         <b-row v-else-if="level === 4" align-v="center" class="min-vh-75 bg-linen" :class="rowClass">
-            <b-col lg="6" align-self="stretch" class="fade p-0" :class="colClass">
+            <b-col lg="6" align-self="stretch" class="blur p-0" :class="colClass">
                 <b-img v-if="img1" :src="require(`@/assets/img/${img1}`)" fluid 
-                class="img-full min-vh-50"></b-img>
-                <b-img v-else :src="img2" fluid class="img-full min-vh-50"></b-img>
+                class="img-full aspect-16 min-vh-50"></b-img>
+                <b-img v-else :src="img2" fluid class="img-full aspect-16 min-vh-50"></b-img>
             </b-col>
-            <b-col lg="6" align-self="center" class="text-left p-5">
+            <b-col lg="6" class="left-center min-vh-75 bg-circles-trans p-5">
                 <h6 class="up small text-uppercase" v-html="microTitle"></h6>
                 <h2 class="up h1 font-weight-bold" v-html="title"></h2>
                 <p class="up my-4" v-html="text"></p>
@@ -69,6 +71,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default {
     name: 'SectionComponent',
+    data() {
+        return {
+            isDisabled: false
+        }
+    },
     props: {
         level: {
         type: Number,
@@ -80,6 +87,7 @@ export default {
         btn: String,
         btn1: String,
         btn2: String,
+        btnLink: String,
         img1: String,
         img2: String,
         rowClass: String,
@@ -88,23 +96,30 @@ export default {
         imgClass: String,
     },
     methods: {
+        gsapDisable() {
+            ScrollTrigger.kill();
+            console.log("GSAP disabled")
+        },
+        gsapEnable() {
+            ScrollTrigger.create();
+            console.log("GSAP enabled")
+        },
     },
     mounted() {
 
-  gsap.utils.toArray('.fade').forEach(step => {
-    ScrollTrigger.create({
-        trigger: step,
-        toggleClass: 'text-focus-in'
-    });
-  });
-  
-  gsap.utils.toArray('.up').forEach(step => {
-    ScrollTrigger.create({
-        trigger: step,
-        toggleClass: 'fade-up'
-    });
-  });
-
+       gsap.utils.toArray('.blur').forEach(step => {
+            ScrollTrigger.create({
+                trigger: step,
+                toggleClass: 'blur'
+            });
+        });
+        
+        gsap.utils.toArray('.up').forEach(step => {
+            ScrollTrigger.create({
+                trigger: step,
+                toggleClass: 'fade-up'
+            });
+        });
 
 
         // gsap.utils.toArray('.up').forEach(up => {
@@ -130,3 +145,7 @@ export default {
     }
 }
 </script>
+
+<style>
+
+</style>

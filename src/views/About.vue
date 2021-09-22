@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <b-container fluid>
+    <b-container fluid class="p-0">
       <banner-component
     :title="data.banner.title"
     :subtitle="data.banner.subtitle"
@@ -8,6 +8,9 @@
     :btn2="data.banner.btn2"
     :img1="data.banner.img1"
     ></banner-component>
+
+    <!-- <div class="circle"></div> -->
+    <!-- <b-button variant="info" @click="disableGSAP">Disable</b-button> -->
 
     <section-component :level="20"
     id="mission"
@@ -68,6 +71,26 @@
     :text="data.section_1.text"
     :btn="data.section_1.btn"></section-component>
 
+<div class="p-0 w-100" id="container">
+<section class="min-vh-100 bg-success center-center">
+  <h1>Section One</h1>
+</section>
+<section class="min-vh-100 bg-info center-center">
+    <h1>Section Two</h1>
+</section>
+<section class="min-vh-100 bg-warning center-center">
+    <h1>Section Three</h1>
+</section>
+<section>
+    <h1>Section Four</h1>
+</section>
+<section>
+    <h1>Section Five</h1>
+</section>
+
+
+</div>
+
     </b-container>
   </div>
 </template>
@@ -76,14 +99,14 @@
 import data from '../frontaid/frontaid.content.json'
 import BannerComponent from '../components/layout/BannerComponent.vue'
 import SectionComponent from '../components/SectionComponent.vue'
-import { animations } from '../mixins/animations'
+// import { animations } from '../mixins/animations'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default {
   name: 'About',
-  mixins:[animations],
+  // mixins:[animations],
   components: {
     BannerComponent,
     SectionComponent
@@ -93,15 +116,26 @@ export default {
       data: data.page_1
     }
   },
-  methods: {},
+  // methods: {
+  //   disableGSAP() {
+  //     tl.disable()
+  //   }
+  // },
   mounted() {
-          // gsap.to('.circle', {x:500, duration: 3})
+     const tl = gsap.timeline({
+        defaults: {
+          duration: 0.8,
+          ease: "sine"
+        }
+      });
+      tl.to('.circle', {x:500, duration: 3})
 
   }
 }
 </script>
 
 <style>
+
 .gs_reveal {
   opacity: 0;
   visibility: hidden;
