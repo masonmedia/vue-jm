@@ -1,24 +1,31 @@
-/* text */
-.playfair, 
+/* text */ 
 h1, .h1,
 .h2, h2,
 .h3, h3,
 h4, .h4,
-.navbar-brand {
-  font-family: 'Playfair Display', Helvetica, Arial;
+.navbar-brand,
+h5, .h5,
+h6,
+p {
+  // font-family: 'Playfair Display', Helvetica, Arial;
+  font-family: 'Helvetica Neue', Helvetica, Arial sans-serif;
+}
+
+h5, .h5 {
+  letter-spacing: -1px;
 }
 
   .site-title {
     font-size: 13vmin;
     font-weight: 900;
-    // line-height: 85%;
-    line-height: 74%;
-    letter-spacing: -7px;
-    // letter-spacing: -3px;
+    line-height: 85%;
+    // line-height: 74%;
+    // letter-spacing: -7px;
+    letter-spacing: -3px;
     margin: 0;
-    // -webkit-text-stroke: 3px #343a40;
-    -webkit-text-stroke: 1px #343a40;
-    // text-shadow: 1px 1px 5px #DCD2C8, 3px 3px 10px #DCD2C8, 6px 6px 5px #DCD2C8;
+    -webkit-text-stroke: 3px #343a40;
+    // -webkit-text-stroke: 1px #343a40;
+    text-shadow: 1px 1px 5px #DCD2C8, 3px 3px 10px #DCD2C8, 6px 6px 5px #DCD2C8;
   }
  
   .site-title-stroke {
@@ -39,17 +46,32 @@ h4, .h4,
   }
   
   .section-title {
+    // font-size: 48px;
+    // font-weight: 900;
+    // line-height: 100%;
+    // letter-spacing: -2px;
+    // padding: 15px 0;
+    // margin: 0;
+
     font-size: 48px;
-    // font-size: 7vmin;
     font-weight: 900;
     line-height: 100%;
-    letter-spacing: -2px;
+    letter-spacing: -3px;
     padding: 15px 0;
     margin: 0;
   }
   
   .text-shadow {
     text-shadow: 0 0 10px #444, 0 0 10px #444, 0 0 10px #444, 0 0 10px #444, 0 0 10px #444, 0 0 10px #444, 0 0 10px #444, 0 0 10px #444;
+  }
+
+  .text-playfair {
+    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
+  }
+
+  .text-tenor {
+    font-family: 'Tenor Sans', Arial, Helvetica, sans-serif;
+
   }
   
   /* media queries */

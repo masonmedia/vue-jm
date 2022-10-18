@@ -10,9 +10,17 @@
 
     <!-- <section v-if="errored">
       <p>We're sorry, we're not able to retrieve this information at the moment, please try back later</p>
-    </section> -->
+    </section>
 
-    <!-- <div v-if="loading">Loading...</div> -->
+    <div v-if="loading">
+      <b-container fluid>
+        <b-row class="min-vh-100">
+          <b-col lg="12" align-self="center">
+            <h1>Loading...</h1>
+          </b-col>
+        </b-row>
+      </b-container>
+    </div> -->
 
     <div class="">
 
@@ -151,7 +159,8 @@ export default {
     mounted () {
 
       // editor link https://simplejsoncms.com/editor/ovymt8uqtx
-      const url = "https://simplejsoncms.com/api/ovymt8uqtx"
+      // const url = "https://simplejsoncms.com/api/ovymt8uqtx"
+      const url = process.env.VUE_APP_URL
       axios
         .get(url)
         .then(response => {
@@ -163,6 +172,7 @@ export default {
           // this.errored = true
         })
         // .finally(() => this.loading = false)
+        console.log(process.env.VUE_APP_URL)
   }
 }
 </script>

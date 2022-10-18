@@ -2,7 +2,7 @@
     <section class="p-0">
 
         <!-- full width text section -->        
-        <b-row v-if="level === 1" align-v="center" class="min-vh-75 bg-circles-trans" :class="rowClass" :style="rowStyle">
+        <b-row v-if="level === 1" align-v="center" class="min-vh-100" :class="rowClass" :style="rowStyle">
             <b-col lg="8" offset-lg="2" align-self="center" class="text-center p-5">
                 <h5 class="up text-uppercase font-weight-bold" v-html="microTitle"></h5>
                 <h2 class="up section-title" v-html="title"></h2>
@@ -21,13 +21,13 @@
                 <b-img v-else :src="img2" fluid class="img-full min-vh-50"></b-img>
             </b-col>
         </b-row>
-
+        
         <!-- 50-50 text-img section -->
         <b-row v-else-if="level === 3" align-v="center" class="min-vh-75 bg-light" :class="rowClass">
-            <b-col lg="6" class="left-center min-vh-75 bg-circles-trans p-5" order="2" order-lg="1">
+            <b-col lg="6" class="left-center min-vh-75 p-5" order="2" order-lg="1">
                 <h6 class="up small text-uppercase" v-html="microTitle"></h6>
-                <h2 class="up h1 font-weight-bold" v-html="title"></h2>
-                <p class="up my-4" v-html="text"></p>
+                <h2 class="up section-title font-weight-bold" v-html="title"></h2>
+                <p class="up" v-html="text"></p>
                 <b-icon icon="arrow-down" font-scale="2" variant="dark" class="up"></b-icon>
             </b-col>
             <b-col lg="6" align-self="stretch" class="blur p-0" :class="colClass" order="1" order-lg="2">
@@ -45,9 +45,9 @@
                 class="img-full aspect-16 min-vh-50"></b-img>
                 <b-img v-else :src="img2" fluid class="img-full aspect-16 min-vh-50"></b-img>
             </b-col>
-            <b-col lg="6" class="left-center min-vh-75 bg-circles-trans p-5">
+            <b-col lg="6" class="left-center min-vh-75 p-5">
                 <h6 class="up small text-uppercase" v-html="microTitle"></h6>
-                <h2 class="up h1 font-weight-bold" v-html="title"></h2>
+                <h2 class="up section-title font-weight-bold" v-html="title"></h2>
                 <p class="up my-4" v-html="text"></p>
                 <b-icon icon="arrow-down" font-scale="2" variant="dark" class="up"></b-icon>
             </b-col>
@@ -73,7 +73,7 @@ export default {
     name: 'SectionComponent',
     data() {
         return {
-            isDisabled: false
+            isDisabled: false,
         }
     },
     props: {
@@ -104,48 +104,42 @@ export default {
             ScrollTrigger.create();
             console.log("GSAP enabled")
         },
+        animateOnScroll() {
+            gsap.utils.toArray(".up").forEach(layer => {
+                gsap.from(layer, {
+                y: 70,
+                opacity: 0,
+                stagger: 0.3,
+                ease: "power1.inOut",
+                scrollTrigger: {
+                    trigger: layer,
+                }
+            });
+        })
+        },
+        
     },
     mounted() {
 
        gsap.utils.toArray('.blur').forEach(step => {
             ScrollTrigger.create({
                 trigger: step,
-                toggleClass: 'blur'
+                toggleClass: 'blur',
+                once: true,
+                scrub: 1
             });
         });
         
         gsap.utils.toArray('.up').forEach(step => {
             ScrollTrigger.create({
                 trigger: step,
-                toggleClass: 'fade-up'
+                stagger: 0.3,
+                toggleClass: 'fade-up',
+                once: true,
+                scrub: 1
             });
         });
-
-
-        // gsap.utils.toArray('.up').forEach(up => {
-        //     ScrollTrigger.create({
-        //         trigger: up,
-        //         stagger: 1,
-        //         duration: 2,
-        //         ease: 'expo',
-        //         toggleClass: 'fade-up'
-        //         });
-        //     });
-    
-        //     gsap.utils.toArray('.fade').forEach(fade => {
-        //     ScrollTrigger.create({
-        //         trigger: fade,
-        //         stagger: 2,
-        //         duration: 2,
-        //         ease: 'expo',
-        //         toggleClass: 'fade-in'
-        //         });
-        //     });
 
     }
 }
 </script>
-
-<style>
-
-</style>

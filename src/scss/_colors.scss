@@ -22,7 +22,11 @@
     background: #E9E4DF;
   }
   
-  .bg-sand {
+  .bg-sand-gradient {
     background: #DCD2C8;
     background: linear-gradient(to right, #ffffff 0%, #dcd2cb 100%);
+  }
+
+  .bg-sand {
+    background: #DCD2C8;
   }

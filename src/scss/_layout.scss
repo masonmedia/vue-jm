@@ -13,3 +13,7 @@
 .center-center {
     @include flex(column, center, center, center )
 }
+
+.bottom-center {
+    @include flex(column, end, flex-start, left )
+}
